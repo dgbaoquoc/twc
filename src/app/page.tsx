@@ -1,9 +1,13 @@
-import Image from "next/image";
+import Hero from "./_components/hero";
+import Values from "./_components/values";
+import ValuesWithNumbers from "./_components/values-with-numbers";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello world
+    <main>
+      <Hero />
+      <Values />
+      <ValuesWithNumbers />
     </main>
   );
 }
