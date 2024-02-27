@@ -15,6 +15,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import SiteHeader from "@/components/layout/site-header";
 import { cn } from "@/lib/utils";
+import SiteFooter from "@/components/layout/site-footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,6 +53,27 @@ export default function RootLayout({
       <body className={cn("light", inter.className)}>
         <SiteHeader />
         {children}
+        <SiteFooter />
+
+        <Script src="assets/js/jquery-3.6.0.min.js" />
+        <Script src="assets/js/bootstrap.bundle.min.js" />
+        <Script src="assets/js/aos.js" />
+        <Script src="assets/js/menu/menu.js" />
+        <Script src="assets/js/gsap.min.js" />
+        <Script src="assets/js/isotope.pkgd.min.js" />
+        <Script src="assets/js/jquery.magnific-popup.min.js" />
+        <Script src="assets/js/swiper-bundle.min.js" />
+        <Script src="assets/js/countdown.js" />
+        <Script src="assets/js/wow.min.js" />
+        <Script src="assets/js/SplitText.min.js" />
+        <Script src="assets/js/ScrollTrigger.min.js" />
+        <Script src="assets/js/ScrollSmoother.min.js" />
+        <Script src="assets/js/skill-bar.js" />
+
+        <Script src="assets/js/faq.js" />
+        <Script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y" />
+
+        <Script src="assets/js/app.js" />
       </body>
     </html>
   );
