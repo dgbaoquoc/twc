@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export default function Hero() {
+  const t = useTranslations("Home.Hero");
   return (
     <section className="aximo-hero-section dark-bg">
       <div className="container position-relative">
@@ -7,17 +10,12 @@ export default function Hero() {
             <div className="aximo-hero-content">
               <h1>
                 <span className="aximo-title-animation">
-                  A creative
+                  {t("title")}
                   <img src="assets/images/v1/star.png" alt="" />
                 </span>
-                design studio
+                {t("title2")}
               </h1>
-              <p>
-                We&apos;re a creative design studio specializing in meeting the
-                needs of the new generation. We offer innovative and
-                cutting-edge design solutions to help our clients stand out in
-                today&apos;s fast-paced.
-              </p>
+              <p>{t("description")}</p>
               <div className="aximo-hero-user-wrap">
                 <div className="aximo-hero-user-thumb">
                   <div

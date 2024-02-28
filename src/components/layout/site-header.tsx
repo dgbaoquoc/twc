@@ -1,3 +1,5 @@
+import LangSwitcher from "@/components/lang-switcher";
+
 export default function SiteHeader() {
   return (
     <header
@@ -43,6 +45,10 @@ export default function SiteHeader() {
                 {/* Other top-level menu items */}
               </ul>
             </nav>
+          </div>
+
+          <div className="mx-4">
+            <LangSwitcher />
           </div>
 
           <div className="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">

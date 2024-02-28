@@ -1,0 +1,13 @@
+{
+  "Home": {
+    "Hero": {
+      "title": "Đây là",
+      "title2": "bảng quảng cáo",
+      "description": "Chúng tôi là công ty truyền thông, chuyên biệt trong lĩnh vực xây dựng thương hiệu. Giúp đỡ các thương hiệu giao tiếp với khách hàng tiềm năng chính là ưu tiên #1 của chúng tôi."
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Đổi ngôn ngữ",
+    "locale": "{locale, select, vi {🇻🇳 Viet} en {🇺🇸 English} other {Khác}}"
+  }
+}

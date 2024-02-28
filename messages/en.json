@@ -1,0 +1,13 @@
+{
+  "Home": {
+    "Hero": {
+      "title": "A walking",
+      "title2": "billboard",
+      "description": "We’re a communication company that specializes in branding. Helping brands communicate with their potential client is our #1 priority."
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, vi {🇻🇳 Viet} en {🇺🇸 English} other {Unknown}}"
+  }
+}
