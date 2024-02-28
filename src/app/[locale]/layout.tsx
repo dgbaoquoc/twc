@@ -1,10 +1,14 @@
-import "../../styles/globals.css";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import SiteHeader from "@/components/layout/site-header";
-import { cn } from "@/lib/utils";
-import SiteFooter from "@/components/layout/site-footer";
+import "../../styles/globals.css";
+
+import { locales } from "@/configs/site";
+import { unstable_setRequestLocale as setRequestLocale } from "next-intl/server";
 import Script from "next/script";
+
+import SiteHeader from "@/components/layout/site-header";
+import SiteFooter from "@/components/layout/site-footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +17,10 @@ export const metadata: Metadata = {
   description: "Agency",
 };
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default function RootLayout({
   children,
   params: { locale },
@@ -20,6 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  setRequestLocale(locale);
+
+  // const textFooter = useTranslations("Footer");
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>

@@ -4,7 +4,57 @@
       "title": "A walking",
       "title2": "billboard",
       "description": "We’re a communication company that specializes in branding. Helping brands communicate with their potential client is our #1 priority."
+    },
+    "Values": {
+      "headline": "TWC designs",
+      "headline2": "effective solutions",
+      "value1": {
+        "title": "Media Solution",
+        "description": "Creating media plan, visual elements such as logos, branding materials, page layout techniques, brochures, & other marketing collateral."
+      },
+      "value2": {
+        "title": "Marketing Solution",
+        "description": "Providing research, ideas, strategy, and consultation."
+      }
+    },
+    "ValuesWithNumbers": {
+      "headline": "TWC makes your",
+      "headline2": "business outshine competitors"
+    },
+    "Processes": {
+      "headline": "Our high-quality",
+      "headline2": "working processes",
+      "description": "We focus at every stage on effective communication and design meets the client's objectives and expectations.",
+      "description2": "It is important to note that these are simplified steps, and the actual work process may vary depending on the complexity of the project.",
+      "tab1": {
+        "title": "Project idea",
+        "description": "The process starts with a detailed discussion with the client to understand their idea & goals."
+      },
+      "tab2": {
+        "title": "Brainstorming",
+        "description": "Detailed planning of the project will be initiated."
+      },
+      "tab3": {
+        "title": "Launch",
+        "description": "Implement the proposed plan."
+      }
+    },
+    "Testimonials": {
+      "headline": "Clients are always",
+      "headline2": "satisfied with us"
+    },
+    "Banner": {
+      "text": "WHO’S NEXT?"
+    },
+    "Teams": {
+      "headline": "Our founder"
     }
+  },
+  "Footer": {
+    "headline": "Let's start a project together",
+    "description": "Chúng tôi hợp tác chặt chẽ với khách hàng để hiểu mục tiêu, đối tượng mục tiêu và nhu cầu riêng của họ. Chúng tôi sử dụng các kỹ năng sáng tạo của mình để chuyển tải các yêu cầu này và giải pháp thiết kế thực tế.",
+    "phone": "(84) 866 422 784",
+    "mail": "twc.pleasebookme@gmail.com"
   },
   "LocaleSwitcher": {
     "label": "Change language",

@@ -1,10 +1,60 @@
 {
   "Home": {
     "Hero": {
-      "title": "Đây là",
-      "title2": "bảng quảng cáo",
+      "title": "Đây là bảng",
+      "title2": "quảng cáo",
       "description": "Chúng tôi là công ty truyền thông, chuyên biệt trong lĩnh vực xây dựng thương hiệu. Giúp đỡ các thương hiệu giao tiếp với khách hàng tiềm năng chính là ưu tiên #1 của chúng tôi."
+    },
+    "Values": {
+      "headline": "TWC kiến tạo",
+      "headline2": "giải pháp tối ưu",
+      "value1": {
+        "title": "Giải pháp Truyền Thông",
+        "description": "Tạo lập kế hoạch truyền thông, các yếu tố hình ảnh như logo, yếu tố xây dựng thương hiệu, kỹ thuật bố cục trang, tài liệu quảng cáo và tài sản tiếp thị khác."
+      },
+      "value2": {
+        "title": "Giải pháp Marketing",
+        "description": "Providing research, ideas, strategy, and consultation."
+      }
+    },
+    "ValuesWithNumbers": {
+      "headline": "TWC giúp đối tác",
+      "headline2": "doanh nghiệp dẫn đầu xu hướng"
+    },
+    "Processes": {
+      "headline": "Quy trình làm việc",
+      "headline2": "năng suất cao",
+      "description": "Ở mọi giai đoạn, chúng tôi tập trung vào việc giao tiếp và cộng tác hiệu quả giữa khách hàng và đảm bảo rằng thiết kế cuối cùng đáp ứng được mục tiêu và mong đợi của khách hàng.",
+      "description2": "Điều quan trọng cần lưu ý rằng đây là những bước đơn giản hóa và quy trình làm việc thực tế có thể khác nhau tùy thuộc vào mức độ phức tạp của dự án.",
+      "tab1": {
+        "title": "Hoạch định dự án",
+        "description": "Quá trình bắt đầu bằng một cuộc thảo luận chi tiết với khách hàng để hiểu ý tưởng và mục tiêu của họ."
+      },
+      "tab2": {
+        "title": "Lên ý tưởng",
+        "description": "Công tác lập kế hoạch chi tiết cho dự án sẽ được bắt đầu ."
+      },
+      "tab3": {
+        "title": "Bắt đầu",
+        "description": "Triển khai kế hoạch được đề ra."
+      }
+    },
+    "Testimonials": {
+      "headline": "Khách hàng luôn",
+      "headline2": "cảm thấy an tâm với chúng tôi"
+    },
+    "Banner": {
+      "text": "AI LÀ DOANH NGHIỆP TIẾP THEO?"
+    },
+    "Teams": {
+      "headline": "Người sáng lập"
     }
+  },
+  "Footer": {
+    "headline": "Hãy bắt đầu dự án #1 cùng nhau",
+    "description": "Chúng tôi hợp tác chặt chẽ với khách hàng để hiểu mục tiêu, đối tượng mục tiêu và nhu cầu riêng của họ. Chúng tôi sử dụng các kỹ năng sáng tạo của mình để chuyển tải các yêu cầu này và giải pháp thiết kế thực tế.",
+    "phone": "(84) 866 422 784",
+    "mail": "twc.pleasebookme@gmail.com"
   },
   "LocaleSwitcher": {
     "label": "Đổi ngôn ngữ",

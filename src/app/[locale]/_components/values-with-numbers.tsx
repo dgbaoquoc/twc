@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export default function ValuesWithNumber() {
+  const t = useTranslations("Home.ValuesWithNumbers");
   return (
     <section className="section aximo-section-padding">
       <div id="aximo-counter"></div>
@@ -8,12 +11,12 @@ export default function ValuesWithNumber() {
             <div className="col-lg-7">
               <h2>
                 <span className="aximo-title-animation">
-                  We make your
+                  {t("headline")}
                   <span className="aximo-title-icon">
                     <img src="assets/images/v1/star2.png" alt="" />
                   </span>
                 </span>
-                business stand out
+                {t("headline2")}
               </h2>
             </div>
             <div className="col-lg-4 offset-lg-1 d-flex align-items-center">

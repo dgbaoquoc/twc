@@ -10,8 +10,7 @@ export default function Hero() {
             <div className="aximo-hero-content">
               <h1>
                 <span className="aximo-title-animation">
-                  {t("title")}
-                  <img src="assets/images/v1/star.png" alt="" />
+                  {t("title")} <img src="assets/images/v1/star.png" alt="" />
                 </span>
                 {t("title2")}
               </h1>

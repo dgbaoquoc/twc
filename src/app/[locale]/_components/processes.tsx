@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export default function Processes() {
+  const t = useTranslations("Home.Processes");
   return (
     <section className="section">
       <div className="container">
@@ -8,22 +11,15 @@ export default function Processes() {
               <div className="aximo-default-content">
                 <h2>
                   <span className="aximo-title-animation">
-                    Our high-quality
+                    {t("headline")}
                     <span className="aximo-title-icon">
                       <img src="assets/images/v1/star2.png" alt="" />
                     </span>
                   </span>
-                  working processes
+                  {t("headline2")}
                 </h2>
-                <p>
-                  We focus at every stage on effective communication and design
-                  meets the client&apos;s objectives and expectations.
-                </p>
-                <p>
-                  It is important to note that these are simplified steps, and
-                  the actual work process may vary depending on the complexity
-                  of the project.
-                </p>
+                <p>{t("description")}</p>
+                <p>{t("description2")}</p>
               </div>
             </div>
             <div className="col-lg-5">
@@ -34,35 +30,26 @@ export default function Processes() {
               >
                 <div className="aximo-accordion-item open">
                   <div className="aximo-accordion-header">
-                    <h3>01/ Project idea</h3>
+                    <h3>01/ {t("tab1.title")}</h3>
                   </div>
                   <div className="aximo-accordion-body">
-                    <p>
-                      The process starts with a detailed discussion with the
-                      client to understand their idea & goals.
-                    </p>
+                    <p>{t("tab1.description")}</p>
                   </div>
                 </div>
                 <div className="aximo-accordion-item">
                   <div className="aximo-accordion-header">
-                    <h3>02/ Brainstorming</h3>
+                    <h3>02/ {t("tab2.title")}</h3>
                   </div>
                   <div className="aximo-accordion-body">
-                    <p>
-                      Brainstorming is a group creativity technique in which
-                      members attempt to find a conclusion.
-                    </p>
+                    <p>{t("tab2.description")}</p>
                   </div>
                 </div>
                 <div className="aximo-accordion-item">
                   <div className="aximo-accordion-header">
-                    <h3>03/ Launch</h3>
+                    <h3>03/ {t("tab3.title")}</h3>
                   </div>
                   <div className="aximo-accordion-body">
-                    <p>
-                      The completed design assets or final product are delivered
-                      with necessary documentation.
-                    </p>
+                    <p>{t("tab3.description")}</p>
                   </div>
                 </div>
               </div>

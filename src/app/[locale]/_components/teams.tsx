@@ -1,12 +1,14 @@
+import { useTranslations } from "next-intl";
+
 export default function Teams() {
+  const t = useTranslations("Home.Teams");
   return (
     <section className="section aximo-section-padding3">
       <div className="container">
         <div className="aximo-section-title center">
           <h2>
-            We have a team of
+            {t("headline")}
             <span className="aximo-title-animation">
-              creative people
               <span className="aximo-title-icon">
                 <img src="assets/images/v1/star2.png" alt="" />
               </span>

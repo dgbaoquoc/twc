@@ -1,12 +1,15 @@
+import { useTranslations } from "next-intl";
+
 export default function Values() {
+  const t = useTranslations("Home.Values");
   return (
     <section className="section aximo-section-padding4">
       <div className="container">
         <div className="aximo-section-title center">
           <h2>
-            We provide effective
+            {t("headline")}
             <span className="aximo-title-animation">
-              design solutions
+              {t("headline2")}
               <span className="aximo-title-icon">
                 <img src="assets/images/v1/star2.png" alt="" />
               </span>
@@ -24,13 +27,9 @@ export default function Values() {
                   <i className="icon-design-tools"></i>
                 </div>
                 <div className="aximo-iconbox-data">
-                  <h3>UI/UX Design</h3>
-                  <p>
-                    Focusing on user interface (UI) and user experience (UX)
-                    design enhance the usability and accessibility of digital
-                    products & app.
-                  </p>
-                  <a className="aximo-icon" href="service.html">
+                  <h3>{t("value1.title")}</h3>
+                  <p>{t("value1.description")}</p>
+                  <a className="aximo-icon" href="">
                     <img src="assets/images/icon/arrow-right.svg" alt="" />
                   </a>
                 </div>
@@ -45,13 +44,9 @@ export default function Values() {
                   <i className="icon-branding"></i>
                 </div>
                 <div className="aximo-iconbox-data">
-                  <h3>Graphic Design</h3>
-                  <p>
-                    Creating visual elements such as logos, branding materials,
-                    page layout techniques, brochures, & other marketing
-                    collateral.
-                  </p>
-                  <a className="aximo-icon" href="service.html">
+                  <h3>{t("value2.title")}</h3>
+                  <p>{t("value2.description")}</p>
+                  <a className="aximo-icon" href="">
                     <img src="assets/images/icon/arrow-right.svg" alt="" />
                   </a>
                 </div>
