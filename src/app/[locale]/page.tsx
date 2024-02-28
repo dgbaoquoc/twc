@@ -5,8 +5,15 @@ import Teams from "./_components/teams";
 import Testimonials from "./_components/testimonials";
 import Values from "./_components/values";
 import ValuesWithNumbers from "./_components/values-with-numbers";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export default function Home({
+  params: { locale },
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  unstable_setRequestLocale(locale);
+
   const t = useTranslations("Home.Banner");
   return (
     <main>
