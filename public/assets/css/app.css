@@ -16,12 +16,12 @@
 **/
 :root
 {
---heading-color: #000;
+--heading-color: #231f20;
 --heading-color2: #1B1B1B;
 --heading-color3: #191931;
 --heading-color4: #221F1A;
 --body-color: #0C0C0C;
---accent-color: #BFF747;
+--accent-color: #ffde31;
 --white-smoke: #FDFDE1;
 --white-color: #ffffff;
 --orange-color: #FF4612;
@@ -32,11 +32,11 @@
 --light-color2: #FEFCFB;
 --light-color3: #FFF7EA;
 --light-color4: #FFFCF2;
---dark-bg: #000000;
+--dark-bg: #231f20;
 --white-bg: #ffffff;
 --orange-bg: #FF4612;
 --orange-bg2: #FF8064;
---accent-bg: #BFF747;
+--accent-bg: #ffde31;
 --yellow-bg: #FFE757;
 --corn-bg: #F4B905;
 --blue-bg: #0000FF;
@@ -145,7 +145,7 @@ resize: vertical;
 {
 margin: 0.2em 0;
 background: #ccc;
-color: #000;
+color: #231f20;
 padding: 0.2em 0;
 }
 
@@ -1958,7 +1958,7 @@ header.aximo-header-section.aximo-header3.sticky-menu {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #231f20;
   position: fixed;
   z-index: 0;
   visibility: hidden;
@@ -1991,7 +1991,7 @@ header.aximo-header-section.aximo-header3.sticky-menu {
 }
 
 .aximo-sidemenu-column::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #231f20;
   border: 2px solid #555555;
 }
 
@@ -3560,8 +3560,8 @@ h1.post__title {
   margin-left: 20px;
   position: relative;
   border-radius: 0 0 0 425px;
-  border-left: 3px solid #000;
-  border-bottom: 3px solid #000;
+  border-left: 3px solid #231f20;
+  border-bottom: 3px solid #231f20;
 }
 .aximo-hero-thumb3-wrap {
   z-index: 0;
@@ -4995,7 +4995,7 @@ a.aximo-service-icon:hover {
   }
 }
 .aximo-video-section2 .waves {
-  background-color: #000;
+  background-color: #231f20;
 }
 
 @media (max-width: 991px) {
@@ -5015,7 +5015,7 @@ a.aximo-service-icon:hover {
   position: absolute;
   width: 185px;
   height: 185px;
-  background: #000;
+  background: #231f20;
   opacity: 0;
   border-radius: 100%;
   left: -35px;
@@ -8705,7 +8705,7 @@ a.comment-reply {
   justify-content: center;
   border-radius: 20px;
   flex-direction: column;
-  border: 2px solid #000;
+  border: 2px solid #231f20;
 }
 .aximo-countdown-item p {
   font-size: 24px;
@@ -8785,7 +8785,7 @@ a.comment-reply {
 
 button#aximo-notified-btn {
   border-radius: 50px;
-  background: #BFF747;
+  background: #ffde31;
   width: 150px;
   height: 50px;
   font-size: 16px;

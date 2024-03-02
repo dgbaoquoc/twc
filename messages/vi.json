@@ -39,6 +39,30 @@
         "description": "Triển khai kế hoạch được đề ra."
       }
     },
+    "Projects": {
+      "headline": "Sở hữu các dự án",
+      "headline2": "đa dạng lĩnh vực",
+      "p1": {
+        "headline": "A WALKING BILLBOARD",
+        "subHead": "TWC Magazine",
+        "subText": "Trong công việc xây dựng một cộng đồng đa dạng nhằm kết nối Thương hiệu với những kiến thức cập nhật trong ngành."
+      },
+      "p2": {
+        "headline": "Máy Điện Châm M8",
+        "subHead": "Bệnh Viện Châm Cứu TW",
+        "subText": "Chúng tôi được yêu cầu giúp họ quảng bá thiết bị kích thích của mình."
+      },
+      "p3": {
+        "headline": "Visa Flash 2in1",
+        "subHead": "Ngân Hàng TP Bank",
+        "subText": "Chúng tôi được yêu cầu hỗ trợ phát triển và ra mắt thẻ ngân hàng mới cho TP Bank."
+      },
+      "p4": {
+        "headline": "Nature Therapy",
+        "subHead": "Phòng Khám Trị Liệu Tự Nhiên DT",
+        "subText": "Chúng tôi đã giúp thiết kế và phát triển một nền tảng nhằm cung cấp cho khách truy cập thông tin rõ ràng hơn và giáo dục khán giả về liệu pháp tự nhiên."
+      }
+    },
     "Testimonials": {
       "headline": "Khách hàng luôn",
       "headline2": "cảm thấy an tâm với chúng tôi"

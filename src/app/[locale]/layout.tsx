@@ -1,7 +1,7 @@
+import "../../styles/globals.css";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../../styles/globals.css";
 
 import { locales } from "@/configs/site";
 import { unstable_setRequestLocale as setRequestLocale } from "next-intl/server";
@@ -60,7 +60,6 @@ export default function RootLayout({
         <Script src="assets/js/jquery-3.6.0.min.js" />
         <Script src="assets/js/bootstrap.bundle.min.js" />
         <Script src="assets/js/aos.js" />
-        <Script src="assets/js/menu/menu.js" />
         <Script src="assets/js/gsap.min.js" />
         <Script src="assets/js/isotope.pkgd.min.js" />
         <Script src="assets/js/jquery.magnific-popup.min.js" />

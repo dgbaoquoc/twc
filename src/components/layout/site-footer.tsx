@@ -1,9 +1,11 @@
 import pick from "lodash/pick";
+import Image from "next/image";
 import {
   NextIntlClientProvider,
   useMessages,
   useTranslations,
 } from "next-intl";
+import Link from "next/link";
 
 export default function SiteFooter() {
   const messages = useMessages();
@@ -11,7 +13,7 @@ export default function SiteFooter() {
 
   return (
     <NextIntlClientProvider messages={pick(messages, "Footer")}>
-      <footer className="aximo-footer-section dark-bg">
+      <footer className="aximo-footer-section dark-bg" id="contact">
         <div className="container">
           <div className="aximo-footer-top aximo-section-padding">
             <div className="row">
@@ -109,14 +111,20 @@ export default function SiteFooter() {
             <div className="row">
               <div className="col-lg-6">
                 <div className="aximo-footer-logo">
-                  <a href="">
-                    <img src="assets/images/logo/logo-white.svg" alt="" />
-                  </a>
+                  <Link href="/">
+                    <Image
+                      src="/assets/images/logo/logo-white.png"
+                      width={124}
+                      height={24}
+                      alt="TWC logo"
+                      className="light-version-logo"
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="aximo-copywright one">
-                  <p> &copy; Copyright 2023, All Rights Reserved by Mthemeus</p>
+                  <p> &copy; Copyright 2024, All Rights Reserved by TWC</p>
                 </div>
               </div>
             </div>

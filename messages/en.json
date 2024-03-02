@@ -39,6 +39,30 @@
         "description": "Implement the proposed plan."
       }
     },
+    "Projects": {
+      "headline": "Have a diversify",
+      "headline2": "set of projects",
+      "p1": {
+        "headline": "A WALKING BILLBOARD",
+        "subHead": "TWC Magazine",
+        "subText": "In the work of building a diversed community to bridge Brands with the up-to-date knowledge in the industry."
+      },
+      "p2": {
+        "headline": "M8 Stimulator",
+        "subHead": "National Hospital of Accupunture",
+        "subText": "We were asked to help them to promote their stimulator device."
+      },
+      "p3": {
+        "headline": "Visa Flash 2in1",
+        "subHead": "TP Bank",
+        "subText": "We were asked to help develop and launch a new banking’s card for TP Bank."
+      },
+      "p4": {
+        "headline": "Nature Therapy",
+        "subHead": "DT Clinic",
+        "subText": "We helped design and developed a platform that would provide visitors with greater clarity, and educating audience about nature therapy. "
+      }
+    },
     "Testimonials": {
       "headline": "Clients are always",
       "headline2": "satisfied with us"

@@ -1,4 +1,6 @@
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Hero() {
   const t = useTranslations("Home.Hero");
@@ -40,20 +42,25 @@ export default function Hero() {
                   <p>Believed by more than a thousand people</p>
                 </div>
               </div>
-              <a className="aximo-call-btn" href="contact-us.html">
+              <button className="aximo-call-btn">
                 Book a free consultation <i className="icon-call"></i>
-              </a>
+              </button>
               <div className="aximo-hero-shape">
                 <img src="assets/images/v1/shape1.png" alt="" />
               </div>
             </div>
           </div>
           <div className="col-lg-4">
-            <div
-              className="aximo-hero-thumb wow fadeInRight"
-              data-wow-delay="0s"
-            >
-              <img src="assets/images/v1/hero-thumb.png" alt="" />
+            <div className="wow fadeInRight" data-wow-delay="0s">
+              <AspectRatio ratio={1 / 1}>
+                <Image
+                  priority
+                  src="/assets/images/sticker/sticker-1080.png"
+                  fill
+                  alt="TWC sticker"
+                  sizes="(max-width: 576px): 100vw, 50vw"
+                />
+              </AspectRatio>
             </div>
           </div>
         </div>

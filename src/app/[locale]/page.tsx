@@ -6,6 +6,7 @@ import Testimonials from "./_components/testimonials";
 import Values from "./_components/values";
 import ValuesWithNumbers from "./_components/values-with-numbers";
 import { unstable_setRequestLocale } from "next-intl/server";
+import Projects from "./_components/projects";
 
 export default function Home({
   params: { locale },
@@ -20,7 +21,7 @@ export default function Home({
       <Hero />
       <Values />
       <ValuesWithNumbers />
-      {/* <Projects /> */}
+      <Projects />
       <Processes />
       <Testimonials />
       <section className="aximo-auto-slider-section">
