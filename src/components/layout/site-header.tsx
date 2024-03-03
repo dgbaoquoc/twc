@@ -11,17 +11,14 @@ export default function SiteHeader() {
       <div className="container">
         <nav className="navbar site-navbar">
           {/* Brand Logo */}
-          <div className="brand-logo">
-            <Link href="/" prefetch={false}>
-              <Image
-                src="/assets/images/logo/logo-white.png"
-                width={124}
-                height={24}
-                alt="TWC logo"
-                className="light-version-logo"
-              />
-            </Link>
-          </div>
+          <Link href="/" prefetch={false}>
+            <Image
+              src="/assets/images/logo/logo-white.png"
+              width={192}
+              height={48}
+              alt="TWC logo"
+            />
+          </Link>
           <div className="menu-block-wrapper">
             <div className="menu-overlay"></div>
             <nav className="menu-block" id="append-menu-header">
