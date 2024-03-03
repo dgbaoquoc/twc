@@ -10,7 +10,11 @@ import Script from "next/script";
 import SiteHeader from "@/components/layout/site-header";
 import SiteFooter from "@/components/layout/site-footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "TWC",
@@ -30,8 +34,6 @@ export default function RootLayout({
 }>) {
   setRequestLocale(locale);
 
-  // const textFooter = useTranslations("Footer");
-
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
@@ -39,7 +41,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Arimo:wght@600;700&family=Familjen+Grotesk:wght@600;700&family=Inter:wght@400;600&family=Libre+Baskerville:wght@700&family=Syne:wght@600;700&display=swap"
           rel="stylesheet"
         />
-
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/magnific-popup.css" />
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />

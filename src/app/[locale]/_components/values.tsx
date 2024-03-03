@@ -28,7 +28,9 @@ export default function Values() {
                 </div>
                 <div className="aximo-iconbox-data">
                   <h3>{t("value1.title")}</h3>
-                  <p>{t("value1.description")}</p>
+                  <p className="min-h-[90px] line-clamp-3">
+                    {t("value1.description")}
+                  </p>
                   <a className="aximo-icon" href="">
                     <img src="assets/images/icon/arrow-right.svg" alt="" />
                   </a>
@@ -45,7 +47,9 @@ export default function Values() {
                 </div>
                 <div className="aximo-iconbox-data">
                   <h3>{t("value2.title")}</h3>
-                  <p>{t("value2.description")}</p>
+                  <p className="min-h-[90px] line-clamp-3">
+                    {t("value2.description")}
+                  </p>
                   <a className="aximo-icon" href="">
                     <img src="assets/images/icon/arrow-right.svg" alt="" />
                   </a>
