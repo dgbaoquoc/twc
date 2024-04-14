@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { StarIcon } from "@/components/icons";
 import { useTranslations } from "next-intl";
 
 type Project = {
@@ -14,25 +16,25 @@ export default function Projects() {
       headline: t("p1.headline"),
       subHead: t("p1.subHead"),
       subText: t("p1.subText"),
-      image: "",
+      image: "/assets/images/projects/twc.webp",
     },
     {
       headline: t("p2.headline"),
       subHead: t("p2.subHead"),
       subText: t("p2.subText"),
-      image: "",
+      image: "/assets/images/projects/M8.webp",
     },
     {
       headline: t("p3.headline"),
       subHead: t("p3.subHead"),
       subText: t("p3.subText"),
-      image: "",
+      image: "/assets/images/projects/TP.webp",
     },
     {
       headline: t("p4.headline"),
       subHead: t("p4.subHead"),
       subText: t("p4.subText"),
-      image: "",
+      image: "/assets/images/projects/phong_kham.webp",
     },
   ];
 
@@ -44,9 +46,7 @@ export default function Projects() {
             {t("headline")}
             <span className="aximo-title-animation">
               {t("headline2")}
-              <span className="aximo-title-icon">
-                <img src="assets/images/v1/star2.png" alt="" />
-              </span>
+              <StarIcon className="ml-2 size-8" />
             </span>
           </h2>
         </div>
@@ -56,7 +56,12 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div className="swiper-slide" key={index}>
               <div className="aximo-project-thumb">
-                <img src="assets/images/v1/project1.png" alt="" />
+                <Image
+                  src={project.image}
+                  width={1032}
+                  height={780}
+                  alt={project.headline}
+                />
                 <div className="aximo-project-wrap">
                   <div className="aximo-project-data">
                     <a href="single-portfolio.html">

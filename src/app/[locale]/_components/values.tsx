@@ -1,3 +1,4 @@
+import { StarIcon } from "@/components/icons";
 import { useTranslations } from "next-intl";
 
 export default function Values() {
@@ -7,12 +8,10 @@ export default function Values() {
       <div className="container">
         <div className="aximo-section-title center">
           <h2>
-            {t("headline")}
+            {t("headline")}{" "}
             <span className="aximo-title-animation">
               {t("headline2")}
-              <span className="aximo-title-icon">
-                <img src="assets/images/v1/star2.png" alt="" />
-              </span>
+              <StarIcon className="ml-2 size-8" />
             </span>
           </h2>
         </div>

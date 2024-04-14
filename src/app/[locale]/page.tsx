@@ -4,9 +4,9 @@ import Processes from "./_components/processes";
 import Teams from "./_components/teams";
 import Testimonials from "./_components/testimonials";
 import Values from "./_components/values";
-import ValuesWithNumbers from "./_components/values-with-numbers";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Projects from "./_components/projects";
+import { StarIcon } from "@/components/icons";
 
 export default function Home({
   params: { locale },
@@ -20,7 +20,7 @@ export default function Home({
     <main>
       <Hero />
       <Values />
-      <ValuesWithNumbers />
+      {/* <ValuesWithNumbers /> */}
       <Projects />
       <Processes />
       <Testimonials />
@@ -33,7 +33,7 @@ export default function Home({
                 <div className="swiper-slide" key={i}>
                   <div className="aximo-auto-slider-item">
                     <h3>{t("text")}</h3>
-                    <img src="assets/images/v1/star3.png" alt="" />
+                    <StarIcon className="size-6" />
                   </div>
                 </div>
               ))}

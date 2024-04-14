@@ -1,3 +1,4 @@
+import { StarIcon } from "@/components/icons";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -12,7 +13,7 @@ export default function Hero() {
             <div className="aximo-hero-content">
               <h1>
                 <span className="aximo-title-animation">
-                  {t("title")} <img src="assets/images/v1/star.png" alt="" />
+                  {t("title")} <StarIcon className="size-10" />
                 </span>
                 {t("title2")}
               </h1>
@@ -23,19 +24,34 @@ export default function Hero() {
                     className="aximo-hero-user-thumb-item wow fadeInUpX"
                     data-wow-delay="0s"
                   >
-                    <img src="assets/images/v1/user1.png" alt="" />
+                    <Image
+                      src="/assets/images/customers/tp_60.webp"
+                      width={60}
+                      height={60}
+                      alt="TPBank"
+                    />
                   </div>
                   <div
                     className="aximo-hero-user-thumb-item wow fadeInUpX"
                     data-wow-delay="0.25s"
                   >
-                    <img src="assets/images/v1/user3.png" alt="" />
+                    <Image
+                      src="/assets/images/customers/yte_60.webp"
+                      width={60}
+                      height={60}
+                      alt="Y tế"
+                    />
                   </div>
                   <div
                     className="aximo-hero-user-thumb-item wow fadeInUpX"
                     data-wow-delay="0.4s"
                   >
-                    <img src="assets/images/v1/user2.png" alt="" />
+                    <Image
+                      src="/assets/images/customers/bvtc_60.webp"
+                      width={60}
+                      height={60}
+                      alt="Bệnh viện trâm cứu"
+                    />
                   </div>
                 </div>
                 <div className="aximo-hero-user-data">
@@ -46,7 +62,7 @@ export default function Hero() {
                 Book a free consultation <i className="icon-call"></i>
               </button>
               <div className="aximo-hero-shape">
-                <img src="assets/images/v1/shape1.png" alt="" />
+                <img src="assets/images/icon/arrow-hero.svg" alt="" />
               </div>
             </div>
           </div>

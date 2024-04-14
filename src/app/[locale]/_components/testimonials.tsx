@@ -1,3 +1,4 @@
+import { StarIcon } from "@/components/icons";
 import { useTranslations } from "next-intl";
 
 export default function Testimonials() {
@@ -10,9 +11,7 @@ export default function Testimonials() {
             {t("headline")}
             <span className="aximo-title-animation">
               {t("headline2")}
-              <span className="aximo-title-icon">
-                <img src="assets/images/v1/star2.png" alt="" />
-              </span>
+              <StarIcon className="ml-2 size-8" />
             </span>
           </h2>
         </div>
@@ -52,7 +51,7 @@ export default function Testimonials() {
               </div>
               <div className="aximo-testimonial-author">
                 <div className="aximo-testimonial-author-thumb">
-                  <img src="assets/images/v1/t_thumb1.png" alt="" />
+                  <img src="assets/images/customers/tp_72.webp" alt="" />
                 </div>
                 <div className="aximo-testimonial-author-data">
                   <p>
@@ -98,7 +97,7 @@ export default function Testimonials() {
               </div>
               <div className="aximo-testimonial-author">
                 <div className="aximo-testimonial-author-thumb">
-                  <img src="assets/images/v1/t_thumb2.png" alt="" />
+                  <img src="assets/images/customers/bvtc_72.webp" alt="" />
                 </div>
                 <div className="aximo-testimonial-author-data">
                   <p>

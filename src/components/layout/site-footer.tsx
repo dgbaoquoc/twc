@@ -6,6 +6,7 @@ import {
   useTranslations,
 } from "next-intl";
 import Link from "next/link";
+import { StarIcon } from "@/components/icons";
 
 export default function SiteFooter() {
   const messages = useMessages();
@@ -22,9 +23,7 @@ export default function SiteFooter() {
                   <h2>
                     <span className="aximo-title-animation">
                       {t("headline")}
-                      <span className="aximo-title-icon">
-                        <img src="assets/images/v1/star2.png" alt="" />
-                      </span>
+                      <StarIcon className="size-8 ml-2" />
                     </span>
                   </h2>
                   <p>{t("description")}</p>
@@ -73,7 +72,7 @@ export default function SiteFooter() {
                     </ul>
                   </div>
                   <div className="aximo-hero-shape aximo-footer-shape">
-                    <img src="assets/images/v1/shape1.png" alt="" />
+                    <img src="assets/images/icon/arrow-hero.svg" alt="" />
                   </div>
                 </div>
               </div>
@@ -113,6 +112,7 @@ export default function SiteFooter() {
                 <div className="aximo-footer-logo">
                   <Link href="/">
                     <Image
+                      unoptimized
                       src="/assets/images/logo/logo-white.png"
                       width={124}
                       height={24}
