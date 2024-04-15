@@ -1,12 +1,10 @@
-import { useTranslations } from "next-intl";
-import Hero from "./_components/hero";
-import Processes from "./_components/processes";
-import Teams from "./_components/teams";
-import Testimonials from "./_components/testimonials";
-import Values from "./_components/values";
-import { unstable_setRequestLocale } from "next-intl/server";
-import Projects from "./_components/projects";
 import { StarIcon } from "@/components/icons";
+import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
+import Hero from "./_components/hero";
+import Projects from "./_components/projects";
+import Teams from "./_components/teams";
+import Values from "./_components/values";
 
 export default function Home({
   params: { locale },
@@ -20,10 +18,7 @@ export default function Home({
     <main>
       <Hero />
       <Values />
-      {/* <ValuesWithNumbers /> */}
       <Projects />
-      <Processes />
-      <Testimonials />
       <section className="aximo-auto-slider-section">
         <div className="swiper aximo-auto-slider">
           <div className="swiper-wrapper">

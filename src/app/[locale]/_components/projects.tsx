@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { StarIcon } from "@/components/icons";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 type Project = {
   headline: string;
@@ -64,15 +65,15 @@ export default function Projects() {
                 />
                 <div className="aximo-project-wrap">
                   <div className="aximo-project-data">
-                    <a href="single-portfolio.html">
+                    <Link href="#">
                       <h3 className="mb-0">{project.headline}</h3>
-                    </a>
+                    </Link>
                     <p className="p-0">{project.subHead}</p>
                     <p className="line-clamp-2">{project.subText}</p>
                   </div>
-                  <a
+                  <Link
                     className="aximo-project-icon"
-                    href="single-portfolio.html"
+                    href="#"
                   >
                     <svg
                       width="34"
@@ -89,7 +90,7 @@ export default function Projects() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
