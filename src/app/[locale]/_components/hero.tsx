@@ -2,6 +2,7 @@ import { StarIcon } from "@/components/icons";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   const t = useTranslations("Home.Hero");
@@ -58,9 +59,11 @@ export default function Hero() {
                   <p>Believed by more than a thousand people</p>
                 </div>
               </div>
-              <button className="aximo-call-btn">
-                Book a free consultation <i className="icon-call"></i>
-              </button>
+              <Link href="#contact">
+                <button className="aximo-call-btn">
+                  Book a call <i className="icon-call"></i>
+                </button>
+              </Link>
               <div className="aximo-hero-shape">
                 <img src="assets/images/icon/arrow-hero.svg" alt="" />
               </div>

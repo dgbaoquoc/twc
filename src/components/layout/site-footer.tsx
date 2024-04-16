@@ -7,6 +7,7 @@ import {
 } from "next-intl";
 import Link from "next/link";
 import { StarIcon } from "@/components/icons";
+import { contacts } from "@/configs/site";
 
 export default function SiteFooter() {
   const messages = useMessages();
@@ -40,8 +41,8 @@ export default function SiteFooter() {
                       <ul>
                         <li>Send us an email:</li>
                         <li>
-                          <a href="mailto:twc.pleasebookme@gmail.com">
-                            twc.pleasebookme@gmail.com
+                          <a href={`mailto:${contacts.email}`}>
+                            {contacts.email}
                           </a>
                         </li>
                       </ul>
@@ -50,23 +51,13 @@ export default function SiteFooter() {
                   <div className="aximo-social-icon social-large">
                     <ul>
                       <li>
-                        <a href="https://twitter.com/" target="_blank">
-                          <i className="icon-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://facebook.com/" target="_blank">
+                        <a href={contacts.facebook} target="_blank">
                           <i className="icon-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com/" target="_blank">
+                        <a href={contacts.instagram} target="_blank">
                           <i className="icon-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.linkedin.com/" target="_blank">
-                          <i className="icon-linkedin"></i>
                         </a>
                       </li>
                     </ul>
