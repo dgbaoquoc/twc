@@ -6,7 +6,7 @@ export default function Values() {
   return (
     <section className="section aximo-section-padding4">
       <div className="container">
-        <div className="aximo-section-title center">
+        <div className="aximo-section-title center light">
           <h2>
             {t("headline")}{" "}
             <span className="aximo-title-animation">

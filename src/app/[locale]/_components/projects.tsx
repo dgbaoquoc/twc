@@ -40,16 +40,10 @@ export default function Projects() {
   ];
 
   return (
-    <section className="section dark-bg aximo-section-padding">
+    <section className="section aximo-section-padding">
       <div className="container">
-        <div className="aximo-section-title center light">
-          <h2>
-            {t("headline")}
-            <span className="aximo-title-animation">
-              {t("headline2")}
-              <StarIcon className="ml-2 size-8" />
-            </span>
-          </h2>
+        <div className="aximo-section-title center">
+          <h2>{t("headline")}</h2>
         </div>
       </div>
       <div className="swiper aximo-project-slider">
@@ -69,12 +63,8 @@ export default function Projects() {
                       <h3 className="mb-0">{project.headline}</h3>
                     </Link>
                     <p className="p-0">{project.subHead}</p>
-                    <p className="line-clamp-2">{project.subText}</p>
                   </div>
-                  <Link
-                    className="aximo-project-icon"
-                    href="#"
-                  >
+                  <Link className="aximo-project-icon" href="#">
                     <svg
                       width="34"
                       height="28"

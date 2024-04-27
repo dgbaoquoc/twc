@@ -1,13 +1,12 @@
-import "../../styles/globals.css";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "../../styles/globals.css";
 
 import { locales } from "@/configs/site";
 import { unstable_setRequestLocale as setRequestLocale } from "next-intl/server";
 import Script from "next/script";
 
-import SiteHeader from "@/components/layout/site-header";
 import SiteFooter from "@/components/layout/site-footer";
 
 const inter = Inter({
@@ -53,8 +52,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/app.min.css" />
       </head>
-      <body className={cn("light", inter.className)}>
-        <SiteHeader />
+      <body className={cn("bg-black", inter.className)}>
         {children}
         <SiteFooter />
 
