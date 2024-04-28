@@ -1,10 +1,8 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  important: true,
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
@@ -19,6 +17,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        gta: ["var(--font-gta)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

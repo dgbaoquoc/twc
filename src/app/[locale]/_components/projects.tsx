@@ -40,7 +40,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="section aximo-section-padding">
+    <section id="clients" className="section aximo-section-padding">
       <div className="container">
         <div className="aximo-section-title center">
           <h2>{t("headline")}</h2>
