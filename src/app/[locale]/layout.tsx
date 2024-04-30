@@ -1,4 +1,4 @@
-import "../../styles/globals.css";
+import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,8 +7,9 @@ import { locales } from "@/configs/site";
 import { unstable_setRequestLocale as setRequestLocale } from "next-intl/server";
 import Script from "next/script";
 
-import SiteHeader from "@/components/layout/site-header";
 import SiteFooter from "@/components/layout/site-footer";
+import BackgroundImage from "../../../public/assets/images/twc_background.webp";
+import { gta } from "@/configs/fonts";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,8 +54,15 @@ export default function RootLayout({
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/app.min.css" />
       </head>
-      <body className={cn("light", inter.className)}>
-        <SiteHeader />
+      <body
+        className={cn(`${inter.className} ${gta.variable}`)}
+        style={{
+          backgroundImage: `url(${BackgroundImage.src})`,
+          width: "100%",
+          height: "100%",
+          backgroundSize: "cover",
+        }}
+      >
         {children}
         <SiteFooter />
 
