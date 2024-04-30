@@ -19,6 +19,7 @@ const config = {
     extend: {
       fontFamily: {
         gta: ["var(--font-gta)"],
+        epilogue: ["var(--font-epilogue)"],
       },
       colors: {
         border: "hsl(var(--border))",

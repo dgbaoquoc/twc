@@ -41,16 +41,16 @@ export default function Projects() {
 
   return (
     <section id="clients" className="section aximo-section-padding">
-      <div className="container">
-        <div className="aximo-section-title center">
-          <h2>{t("headline")}</h2>
-        </div>
-      </div>
       <div className="swiper aximo-project-slider">
         <div className="swiper-wrapper">
           {projects.map((project, index) => (
             <div className="swiper-slide" key={index}>
-              <div className="aximo-project-thumb">
+              <div
+                className="aximo-project-thumb"
+                style={{
+                  border: "none!important",
+                }}
+              >
                 <Image
                   src={project.image}
                   width={1032}

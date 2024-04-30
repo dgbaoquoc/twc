@@ -9,6 +9,8 @@ import Logo from "@/public/assets/images/logo/twc_svgs/logo.svg";
 import Marketing from "@/public/assets/images/logo/twc_svgs/marketing_solution.svg";
 import Media from "@/public/assets/images/logo/twc_svgs/media_solution.svg";
 import SubHeadline from "@/public/assets/images/logo/twc_svgs/sub_headline.svg";
+import React from "react";
+import InstagramPosts from "./_components/instagram-posts";
 
 export default function Home({
   params: { locale },
@@ -19,20 +21,21 @@ export default function Home({
 
   const t = useTranslations("Home.Banner");
   return (
-    <main className="space-y-8">
+    <main>
       <section className="grid grid-cols-1 md:grid-cols-3">
         <div className="col-span-1 flex justify-center items-center">
-          <Image src={Logo} alt="TWC Logo" width={372} height={372} />
+          <Image src={Logo} alt="TWC Logo" width={250} height={250} />
         </div>
         <div className="col-span-2 flex flex-col gap-y-4 justify-center items-center">
           <h1 className="font-gta font-extrabold text-black text-4xl lg:text-7xl text-center">
-            TWC COMMUNICATION
+            TWC <br />
+            COMMUNICATION
           </h1>
           <div className="flex justify-center">
             <Image
               src={SubHeadline}
               alt="A Vietnamese marketing agency"
-              width={334}
+              width={334} // mobile /2
               height={32}
             />
           </div>
@@ -98,30 +101,34 @@ export default function Home({
 
       <Projects />
 
-      <section className="aximo-auto-slider-section my-6">
+      <section className="aximo-auto-slider-section mt-6">
         <div className="swiper aximo-auto-slider">
           <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <div className="aximo-auto-slider-item">
-                <h3 className="font-gta font-bold italic">
-                  WE HAVE THE MARKET FOR YOUR BRAND
-                </h3>
-              </div>
-              <div className="aximo-auto-slider-item">
-                <h3 className="font-gta font-bold italic">
-                  YES, TWC KNOWS THE WAY
-                </h3>
-              </div>
-            </div>
+            {Array(6)
+              .fill(0)
+              .map((_, i) => (
+                <div key={i} className="swiper-slide">
+                  <div className="aximo-auto-slider-item">
+                    <h3 className="font-gta font-bold italic">
+                      WE HAVE THE MARKET FOR YOUR BRAND
+                    </h3>
+                  </div>
+                  <div className="aximo-auto-slider-item">
+                    <h3 className="font-gta font-bold italic">
+                      YES, TWC KNOWS THE WAY
+                    </h3>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </section>
 
-      <section className="section aximo-section-padding grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-2.5">
-        <div>IG posts</div>
+      <section id="ig-posts" className="section aximo-section-paddind">
+        <InstagramPosts />
       </section>
 
-      <section className="aximo-auto-slider-section my-6 bg-[#FBD616]">
+      <section className="aximo-auto-slider-section">
         <div className="swiper aximo-auto-slider">
           <div className="swiper-wrapper">
             {Array(6)
@@ -129,7 +136,9 @@ export default function Home({
               .map((_, i) => (
                 <div className="swiper-slide" key={i}>
                   <div className="aximo-auto-slider-item">
-                    <h3 className="font-gta font-bold italic">WHO’S NEXT?</h3>
+                    <h3 className="font-gta text-black font-bold italic">
+                      WHO’S NEXT?
+                    </h3>
                   </div>
                 </div>
               ))}

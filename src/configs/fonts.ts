@@ -60,3 +60,24 @@ export const gta = localFont({
     },
   ],
 });
+
+export const epilogue = localFont({
+  variable: "--font-epilogue",
+  src: [
+    {
+      path: "../../public/assets/twc_fonts/Epilogue-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/twc_fonts/Epilogue-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../../public/assets/twc_fonts/Epilogue-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});

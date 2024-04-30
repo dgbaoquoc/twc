@@ -1,14 +1,15 @@
-import pick from "lodash/pick";
-import Image from "next/image";
-import {
-  NextIntlClientProvider,
-  useMessages,
-  useTranslations,
-} from "next-intl";
-import Link from "next/link";
-import { StarIcon } from "@/components/icons";
 import { contacts } from "@/configs/site";
 import Logo from "@/public/assets/images/logo/twc_svgs/logo.svg";
+import { useMessages, useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+
+import TWC from "@/public/assets/images/logo/footers/twc.svg";
+import HipHub from "@/public/assets/images/logo/footers/hiphub.svg";
+import Anh1 from "@/public/assets/images/logo/footers/1.svg";
+import Anh2 from "@/public/assets/images/logo/footers/2.svg";
+import Anh3 from "@/public/assets/images/logo/footers/3.svg";
 
 export default function SiteFooter() {
   const messages = useMessages();
@@ -18,7 +19,7 @@ export default function SiteFooter() {
     <footer className="container py-10">
       <section className="grid grid-cols-3">
         <div className="flex flex-col gap-4">
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-y-4 md:flex-row justify-between">
             <Link
               href="/"
               className="font-gta font-medium uppercase text-black"
@@ -40,12 +41,29 @@ export default function SiteFooter() {
           <Image src={Logo} alt="TWC Logo" width={140} height={140} />
         </div>
         <div className="flex justify-end">
-          <Link
-            href="#clients"
-            className="font-gta font-medium uppercase text-black"
-          >
-            Clients
-          </Link>
+          <Drawer>
+            <DrawerTrigger className="font-gta font-medium uppercase text-black">
+              Clients
+            </DrawerTrigger>
+            <DrawerContent className="bg-black text-white">
+              <div className="container p-6">
+                <div className="flex flex-col gap-4">
+                  <p className="w-1/3 font-epilogue font-bold text-xs">
+                    TWC HAS HAD THE PLEASURE OF WORKING WITH SOME TOP NOTCH
+                    BRAND. THE LIKES OF:
+                  </p>
+                  <div className="flex flex-wrap md:justify-between gap-4">
+                    <Image priority src={Anh1} alt="Anh 1" />
+
+                    <Image priority src={HipHub} alt="Hiphub" />
+                    <Image priority src={Anh2} alt="Anh 2" />
+                    <Image priority src={Anh3} alt="Anh 3" />
+                    <Image priority src={TWC} alt="TWC" />
+                  </div>
+                </div>
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </section>
 
@@ -69,114 +87,5 @@ export default function SiteFooter() {
         </div>
       </section>
     </footer>
-    // <NextIntlClientProvider messages={pick(messages, "Footer")}>
-    //   <footer className="aximo-footer-section dark-bg" id="contact">
-    //     <div className="container">
-    //       <div className="aximo-footer-top aximo-section-padding">
-    //         <div className="row">
-    //           <div className="col-lg-7">
-    //             <div className="aximo-default-content light position-relative">
-    //               <h2>
-    //                 <span className="aximo-title-animation">
-    //                   {t("headline")}
-    //                   <StarIcon className="size-8 ml-2" />
-    //                 </span>
-    //               </h2>
-    //               <p>{t("description")}</p>
-    //               <div className="aximo-info-wrap">
-    //                 <div className="aximo-info">
-    //                   <ul>
-    //                     <li>Give us a call:</li>
-    //                     <li>
-    //                       <a href="tel:+84866422784">(84) 866 422 784</a>
-    //                     </li>
-    //                   </ul>
-    //                 </div>
-    //                 <div className="aximo-info">
-    //                   <ul>
-    //                     <li>Send us an email:</li>
-    //                     <li>
-    //                       <a href={`mailto:${contacts.email}`}>
-    //                         {contacts.email}
-    //                       </a>
-    //                     </li>
-    //                   </ul>
-    //                 </div>
-    //               </div>
-    //               <div className="aximo-social-icon social-large">
-    //                 <ul>
-    //                   <li>
-    //                     <a href={contacts.facebook} target="_blank">
-    //                       <i className="icon-facebook"></i>
-    //                     </a>
-    //                   </li>
-    //                   <li>
-    //                     <a href={contacts.instagram} target="_blank">
-    //                       <i className="icon-instagram"></i>
-    //                     </a>
-    //                   </li>
-    //                 </ul>
-    //               </div>
-    //               <div className="aximo-hero-shape aximo-footer-shape">
-    //                 <img src="assets/images/icon/arrow-hero.svg" alt="" />
-    //               </div>
-    //             </div>
-    //           </div>
-    //           <div className="col-lg-5">
-    //             <div className="aximo-form-wrap">
-    //               <h4>Send us a message</h4>
-    //               <form action="#">
-    //                 <div className="aximo-form-field">
-    //                   <input type="text" placeholder="Your name" />
-    //                 </div>
-    //                 <div className="aximo-form-field">
-    //                   <input type="email" placeholder="Your email address" />
-    //                 </div>
-    //                 <div className="aximo-form-field">
-    //                   <input type="text" placeholder="+088-234-6849" />
-    //                 </div>
-    //                 <div className="aximo-form-field">
-    //                   <textarea
-    //                     name="textarea"
-    //                     placeholder="Write your message here..."
-    //                   ></textarea>
-    //                 </div>
-    //                 <button id="aximo-submit-btn" type="submit">
-    //                   Send message{" "}
-    //                   <span>
-    //                     <img src="assets/images/icon/arrow-right3.svg" alt="" />
-    //                   </span>
-    //                 </button>
-    //               </form>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className="aximo-footer-bottom">
-    //         <div className="row">
-    //           <div className="col-lg-6">
-    //             <div className="aximo-footer-logo">
-    //               <Link href="/">
-    //                 <Image
-    //                   unoptimized
-    //                   src="/assets/images/logo/logo-white.png"
-    //                   width={124}
-    //                   height={24}
-    //                   alt="TWC logo"
-    //                   className="light-version-logo"
-    //                 />
-    //               </Link>
-    //             </div>
-    //           </div>
-    //           <div className="col-lg-6">
-    //             <div className="aximo-copywright one">
-    //               <p> &copy; Copyright 2024, All Rights Reserved by TWC</p>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </footer>
-    // </NextIntlClientProvider>
   );
 }
