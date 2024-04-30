@@ -40,7 +40,7 @@ export default function SiteFooter() {
         <div className="flex justify-center">
           <Image src={Logo} alt="TWC Logo" width={140} height={140} />
         </div>
-        <div className="flex justify-end">
+        <div className="flex items-start justify-end">
           <Drawer>
             <DrawerTrigger className="font-gta font-medium uppercase text-black">
               Clients

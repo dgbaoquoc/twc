@@ -82,3 +82,7 @@
 .eapps-instagram-feed-posts-grid-load-more-visible {
   display: none !important;
 }
+
+canvas {
+  @apply rounded-[80px];
+}

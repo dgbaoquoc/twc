@@ -76,7 +76,7 @@ export default function Home({
         <Image src="/assets/images/logo/twc_svgs/line.svg" alt="Line" fill />
       </div>
 
-      <section className="section aximo-section-padding grid grid-cols-3">
+      <section className="section aximo-section-padding grid grid-cols-3 -space-x-16">
         <div className="flex justify-end items-center -mt-16 mr-16">
           <Image
             src="/assets/images/icon/arrow-teams.svg"
@@ -89,13 +89,20 @@ export default function Home({
           <Teams />
         </div>
         <div
-          className="z-10 -ml-16 aspect-square size-full p-16 flex items-center justify-center border rounded-[80px] backdrop-blur-sm"
+          className="aspect-square size-full p-16 flex items-center justify-center border rounded-[80px] bg-transparent"
           style={{
+            marginLeft: "-116px",
             borderColor: "black!important",
+            // filter: "blur(1px)",
           }}
         >
-          “ We are designated to export Viet culture across the globe and enter
-          internationals to Vietnamese market. Mr. Tung
+          <p className="text-black font-epilogue italic font-bold">
+            We are designated to export Viet culture across the globe and enter
+            internationals to Vietnamese market.
+            <br />
+            <br />
+            <span className="font-normal">Mr. Tran Huy Tung</span>
+          </p>
         </div>
       </section>
 
@@ -104,7 +111,7 @@ export default function Home({
       <section className="aximo-auto-slider-section mt-6">
         <div className="swiper aximo-auto-slider">
           <div className="swiper-wrapper">
-            {Array(6)
+            {Array(4)
               .fill(0)
               .map((_, i) => (
                 <div key={i} className="swiper-slide">
@@ -124,11 +131,11 @@ export default function Home({
         </div>
       </section>
 
-      <section id="ig-posts" className="section aximo-section-paddind">
+      <section id="ig-posts" className="section">
         <InstagramPosts />
       </section>
 
-      <section className="aximo-auto-slider-section">
+      <section className="aximo-auto-slider-section bg-transparent">
         <div className="swiper aximo-auto-slider">
           <div className="swiper-wrapper">
             {Array(6)
