@@ -20,6 +20,7 @@ const config = {
       fontFamily: {
         gta: ["var(--font-gta)"],
         epilogue: ["var(--font-epilogue)"],
+        fasterOne: ["var(--font-faster-one)"],
       },
       colors: {
         border: "hsl(var(--border))",

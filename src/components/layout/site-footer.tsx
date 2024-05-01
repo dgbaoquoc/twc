@@ -1,6 +1,5 @@
 import { contacts } from "@/configs/site";
 import Logo from "@/public/assets/images/logo/twc_svgs/logo.svg";
-import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
@@ -12,9 +11,6 @@ import Anh2 from "@/public/assets/images/logo/footers/2.svg";
 import Anh3 from "@/public/assets/images/logo/footers/3.svg";
 
 export default function SiteFooter() {
-  const messages = useMessages();
-  const t = useTranslations("Footer");
-
   return (
     <footer className="container py-10">
       <section className="grid grid-cols-3">
@@ -22,18 +18,21 @@ export default function SiteFooter() {
           <div className="flex flex-col gap-y-4 md:flex-row justify-between">
             <Link
               href="/"
-              className="font-gta font-medium uppercase text-black"
+              className="font-gta text-xs md:text-sm font-medium uppercase text-black"
             >
               About
             </Link>
             <Link
               href="/"
-              className="font-gta font-medium uppercase text-black"
+              className="font-gta text-xs md:text-sm font-medium uppercase text-black"
             >
               Magazine
             </Link>
           </div>
-          <Link href="/" className="font-gta font-medium uppercase text-black">
+          <Link
+            href="/"
+            className="font-gta text-xs md:text-sm font-medium uppercase text-black"
+          >
             Contact
           </Link>
         </div>
@@ -42,7 +41,7 @@ export default function SiteFooter() {
         </div>
         <div className="flex items-start justify-end">
           <Drawer>
-            <DrawerTrigger className="font-gta font-medium uppercase text-black">
+            <DrawerTrigger className="font-gta text-xs md:text-sm font-medium uppercase text-black">
               Clients
             </DrawerTrigger>
             <DrawerContent className="bg-black text-white">
@@ -68,7 +67,7 @@ export default function SiteFooter() {
       </section>
 
       <section className="flex mt-10 justify-between">
-        <p className="font-gta font-light flex-1">
+        <p className="font-gta text-xs md:text-sm font-light flex-1">
           © TWC your friendly Vietnamese Agency Since 2022 ✷
         </p>
         <div className="aximo-social-icon social-large">

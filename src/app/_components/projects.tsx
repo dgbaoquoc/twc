@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { StarIcon } from "@/components/icons";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 type Project = {
@@ -11,30 +9,32 @@ type Project = {
 };
 
 export default function Projects() {
-  const t = useTranslations("Home.Projects");
   const projects: Project[] = [
     {
-      headline: t("p1.headline"),
-      subHead: t("p1.subHead"),
-      subText: t("p1.subText"),
+      headline: "A WALKING BILLBOARD",
+      subHead: "TWC Magazine",
+      subText:
+        "In the work of building a diversed community to bridge Brands with the up-to-date knowledge in the industry.",
       image: "/assets/images/projects/twc.webp",
     },
     {
-      headline: t("p2.headline"),
-      subHead: t("p2.subHead"),
-      subText: t("p2.subText"),
+      headline: "M8 Stimulator",
+      subHead: "National Hospital of Accupunture",
+      subText: "We were asked to help them to promote their stimulator device.",
       image: "/assets/images/projects/M8.webp",
     },
     {
-      headline: t("p3.headline"),
-      subHead: t("p3.subHead"),
-      subText: t("p3.subText"),
+      headline: "Visa Flash 2in1",
+      subHead: "TP Bank",
+      subText:
+        "We were asked to help develop and launch a new banking’s card for TP Bank.",
       image: "/assets/images/projects/TP.webp",
     },
     {
-      headline: t("p4.headline"),
-      subHead: t("p4.subHead"),
-      subText: t("p4.subText"),
+      headline: "Nature Therapy",
+      subHead: "DT Clinic",
+      subText:
+        "We helped design and developed a platform that would provide visitors with greater clarity, and educating audience about nature therapy.",
       image: "/assets/images/projects/phong_kham.webp",
     },
   ];
