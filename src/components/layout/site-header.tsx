@@ -1,4 +1,3 @@
-import LangSwitcher from "@/components/lang-switcher";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,10 +29,6 @@ export default function SiteHeader() {
                 <div className="mobile-menu-close">&times;</div>
               </div>
             </nav>
-          </div>
-
-          <div className="mx-4">
-            <LangSwitcher />
           </div>
 
           <div className="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
