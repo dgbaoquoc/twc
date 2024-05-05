@@ -3,4 +3,29 @@ export const contacts = {
   instagram: "https://www.instagram.com/i.twc.i",
   email: "bookus@twccom.co",
   phone: "84866422784",
-}
+  threads: "https://www.threads.net/@i.twc.i",
+  tiktok: "https://www.tiktok.com/@twc.here ",
+};
+
+export const socials = [
+  {
+    alt: "Facebook",
+    href: contacts.facebook,
+    src: "/assets/images/icon/socials/fb.png",
+  },
+  {
+    alt: "Instagram",
+    href: contacts.instagram,
+    src: "/assets/images/icon/socials/ig.png",
+  },
+  {
+    alt: "Threads",
+    href: contacts.threads,
+    src: "/assets/images/icon/socials/threads.png",
+  },
+  {
+    alt: "Tiktok",
+    href: contacts.tiktok,
+    src: "/assets/images/icon/socials/tiktok.png",
+  },
+];
