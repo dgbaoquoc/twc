@@ -9,14 +9,14 @@ export const contacts = {
 
 export const socials = [
   {
-    alt: "Facebook",
-    href: contacts.facebook,
-    src: "/assets/images/icon/socials/fb.png",
-  },
-  {
     alt: "Instagram",
     href: contacts.instagram,
     src: "/assets/images/icon/socials/ig.png",
+  },
+  {
+    alt: "Facebook",
+    href: contacts.facebook,
+    src: "/assets/images/icon/socials/fb.png",
   },
   {
     alt: "Threads",
