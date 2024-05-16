@@ -23,9 +23,9 @@ export default function SiteFooter() {
             </Link>
             <Link
               href="/"
-              className="font-gta text-xs md:text-sm font-medium uppercase text-black"
+              className="font-gta text-xs md:text-sm font-medium uppercase text-black cursor-not-allowed"
             >
-              Magazine
+              Magazine <span className="text-xs">(coming soon...)</span>
             </Link>
           </div>
           <Link
@@ -42,7 +42,7 @@ export default function SiteFooter() {
             alt="TWC Logo"
             width={140}
             height={140}
-            className="-mt-4"
+            className="-mt-4 shrink-0"
           />
         </div>
         <div className="flex items-start justify-end">
