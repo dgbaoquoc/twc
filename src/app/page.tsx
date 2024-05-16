@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main>
       <section className="flex justify-center">
-        <Logo className="animate-jump-in size-[170px] lg:size-[340px]" />
+        <Logo className="animate-jump-in size-[170px] lg:size-[240px]" />
       </section>
 
       <section className="py-2 overflow-hidden bg-black">
@@ -44,18 +44,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative grid lg:grid-cols-2 place-items-center gap-10 py-10 lg:py-[120px]">
+      <section className="relative grid lg:grid-cols-2 place-items-center py-10 gap-y-10 lg:py-[120px]">
         <div className="space-y-2 relative hover:scale-110 transition delay-150 ease-in-out">
-          <h1 className="font-gta font-bold text-[50px] lg:text-[100px]">
-            MEDIA
-          </h1>
+          <h1 className="font-gta font-bold text-[50px]">MEDIA</h1>
           <EyeSVG className="absolute -top-8 right-[2.5rem] lg:right-[6.5rem]" />
           <SolutionSVG className="mx-auto" />
         </div>
         <div className="space-y-2 relative hover:scale-110 transition delay-150 ease-in-out">
-          <h1 className="font-gta font-bold text-[50px] lg:text-[100px]">
-            MARKETING
-          </h1>
+          <h1 className="font-gta font-bold text-[50px]">MARKETING</h1>
           <BikiniCatSVG className="absolute -bottom-4 -right-10" />
           <SolutionSVG className="mx-auto" />
         </div>
@@ -141,7 +137,7 @@ export default function Home() {
 
       <section className="relative aspect-[3/1] mx-auto w-[90%] animate-fade-up">
         <Teams />
-        <div className="z-10 absolute top-[25%] left-[60%]">
+        <div className="z-10 absolute top-[25%] left-[60%] hidden lg:block">
           <p className="text-balance text-white max-w-[300px] font-semibold">
             We are designated to export Viet culture across the globe and help
             international play a part in.

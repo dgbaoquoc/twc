@@ -53,11 +53,11 @@ export default function SiteFooter() {
                     TWC HAS HAD THE PLEASURE OF WORKING WITH SOME TOP NOTCH
                     BRAND. THE LIKES OF:
                   </p>
-                  <div className="flex flex-wrap md:justify-between gap-4">
-                    <Image priority src={Anh1} alt="Anh 1" />
-                    <Image priority src={HipHub} alt="Hiphub" />
-                    <Image priority src={Anh2} alt="Anh 2" />
-                    <Image priority src={Anh3} alt="Anh 3" />
+                  <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-4">
+                    <Image className="shrink-0" src={Anh1} alt="Anh 1" />
+                    <Image className="shrink-0" src={HipHub} alt="Hiphub" />
+                    <Image className="shrink-0" src={Anh2} alt="Anh 2" />
+                    <Image className="shrink-0" src={Anh3} alt="Anh 3" />
                   </div>
                 </div>
               </div>
