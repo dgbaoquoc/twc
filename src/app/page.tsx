@@ -4,12 +4,28 @@ import Teams from "./_components/teams";
 import { BikiniCatSVG, EyeSVG, SolutionSVG } from "@/components/icons";
 import React from "react";
 import InstagramPosts from "./_components/instagram-posts";
+import { Logo } from "@/components/logo";
+
+const projects = [
+  {
+    title: "M8 Stimulator",
+    image: "/assets/images/projects/M8.webp",
+  },
+  {
+    title: "Visa Flash 2in1",
+    image: "/assets/images/projects/TP.webp",
+  },
+  {
+    title: "Nature Therapy",
+    image: "/assets/images/projects/vien-y-hoc-co-truyen.webp",
+  },
+];
 
 export default function Home() {
   return (
     <main>
       <section className="flex justify-center">
-        <Image src="/logo.png" alt="TWC Logo" width={170} height={170} />
+        <Logo className="animate-jump-in size-[170px] lg:size-[340px]" />
       </section>
 
       <section className="py-2 overflow-hidden bg-black">
@@ -29,14 +45,14 @@ export default function Home() {
       </section>
 
       <section className="relative grid lg:grid-cols-2 place-items-center gap-10 py-10 lg:py-[120px]">
-        <div className="space-y-2 relative">
+        <div className="space-y-2 relative hover:scale-110 transition delay-150 ease-in-out">
           <h1 className="font-gta font-bold text-[50px] lg:text-[100px]">
             MEDIA
           </h1>
           <EyeSVG className="absolute -top-8 right-[2.5rem] lg:right-[6.5rem]" />
           <SolutionSVG className="mx-auto" />
         </div>
-        <div className="space-y-2 relative">
+        <div className="space-y-2 relative hover:scale-110 transition delay-150 ease-in-out">
           <h1 className="font-gta font-bold text-[50px] lg:text-[100px]">
             MARKETING
           </h1>
@@ -55,90 +71,75 @@ export default function Home() {
         }}
       >
         <div
-          style={
-            {
-              // maxWidth: "1320px",
-              // paddingLeft: "60px",
-              // paddingRight: "60px",
-            }
-          }
+          className="light-section"
+          style={{
+            paddingBottom: "8vw",
+            marginLeft: "calc(50% - 50vw) !important",
+            marginRight: "calc(50% - 50vw) !important",
+            maxWidth: "1000% !important",
+            width: "100vw !important",
+          }}
         >
-          <div
-            className="light-section"
-            style={{
-              paddingBottom: "8vw",
-              marginLeft: "calc(50% - 50vw) !important",
-              marginRight: "calc(50% - 50vw) !important",
-              maxWidth: "1000% !important",
-              width: "100vw !important",
-            }}
-          >
-            <div id="itemsWrapperLinks">
-              <div
-                id="itemsWrapper"
-                className="webgl-fitthumbs fx-three"
-                style={{ zIndex: 0 }}
-              >
-                {/* Portfolio Wrap */}
-                <div className="portfolio-wrap flex-grid content-full-width fade-scaleout-effect">
-                  {/* Portfolio Columns */}
-                  <div className="portfolio">
-                    {Array(3)
-                      .fill(0)
-                      .map((_, i) => (
-                        <div
-                          className="item wide trigger-item branding design active"
-                          key={i}
-                        >
-                          <div className="item-parallax">
-                            <div className="item-appear">
-                              <div className="item-content">
-                                <a
-                                  className="item-wrap ajax-link-project"
-                                  data-type="page-transition"
-                                  href="project01.html"
-                                />
-                                <div className="item-wrap-image">
-                                  <img
-                                    src="/assets/images/projects/twc.webp"
-                                    className="item-image grid__item-img trigger-item-link"
-                                    alt=""
-                                    style={{ opacity: 1 }}
-                                  />
-                                </div>
-                                <img
-                                  className="grid__item-img grid__item-img--large"
-                                  src="/assets/images/projects/twc.webp"
-                                  alt=""
-                                />
-                              </div>
+          <div id="itemsWrapperLinks">
+            <div
+              id="itemsWrapper"
+              className="webgl-fitthumbs fx-three"
+              style={{ zIndex: 0 }}
+            >
+              {/* Portfolio Wrap */}
+              <div className="portfolio-wrap flex-grid content-full-width fade-scaleout-effect">
+                {/* Portfolio Columns */}
+                <div className="portfolio">
+                  {projects.map((project, i) => (
+                    <div
+                      className="item wide trigger-item branding design active"
+                      key={i}
+                    >
+                      <div className="item-parallax">
+                        <div className="item-appear">
+                          <div className="item-content">
+                            <a
+                              className="item-wrap ajax-link-project"
+                              data-type="page-transition"
+                              href="project01.html"
+                            />
+                            <div className="item-wrap-image">
+                              <img
+                                src={project.image}
+                                className="item-image grid__item-img trigger-item-link"
+                                alt={project.title}
+                                style={{ opacity: 1 }}
+                              />
                             </div>
-                            <div className="item-caption-wrapper">
-                              <div className="item-caption">
-                                <div className="item-title">
-                                  <span>London Royal Theatre</span>
-                                </div>
-                                <div className="item-cat">
-                                  <span data-hover="View Case">
-                                    Brand Identity
-                                  </span>
-                                </div>
-                              </div>
+                            <img
+                              className="grid__item-img grid__item-img--large"
+                              src="/assets/images/projects/twc.webp"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div className="item-caption-wrapper">
+                          <div className="item-caption">
+                            <div className="item-title">
+                              <h3 className="font-gta font-bold text-lg">
+                                {project.title}
+                              </h3>
                             </div>
                           </div>
                         </div>
-                      ))}
-                  </div>
-                  {/*/Portfolio */}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                {/*/Portfolio Wrap */}
+                {/*/Portfolio */}
               </div>
+              {/*/Portfolio Wrap */}
             </div>
           </div>
         </div>
       </div>
 
-      <section className="relative aspect-[3/1] mx-auto w-[90%]">
+      <section className="relative aspect-[3/1] mx-auto w-[90%] animate-fade-up">
         <Teams />
         <div className="z-10 absolute top-[25%] left-[60%]">
           <p className="text-balance text-white max-w-[300px] font-semibold">

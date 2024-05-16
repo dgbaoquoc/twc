@@ -1,13 +1,13 @@
-import { contacts, socials } from "@/configs/site";
-import Logo from "@/public/assets/images/logo/twc_svgs/logo.svg";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import { socials } from "@/configs/site";
 import Image from "next/image";
 import Link from "next/link";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
-import HipHub from "@/public/assets/images/logo/footers/hiphub.svg";
 import Anh1 from "@/public/assets/images/logo/footers/1.svg";
 import Anh2 from "@/public/assets/images/logo/footers/2.svg";
 import Anh3 from "@/public/assets/images/logo/footers/3.svg";
+import HipHub from "@/public/assets/images/logo/footers/hiphub.svg";
+import { Logo } from "../logo";
 
 export default function SiteFooter() {
   return (
@@ -36,14 +36,7 @@ export default function SiteFooter() {
           </Link>
         </div>
         <div className="flex justify-center">
-          <Image
-            unoptimized
-            src="/logo.png"
-            alt="TWC Logo"
-            width={140}
-            height={140}
-            className="-mt-4 shrink-0"
-          />
+          <Logo className="-mt-4 size-[140px]" />
         </div>
         <div className="flex items-start justify-end">
           <Drawer>
