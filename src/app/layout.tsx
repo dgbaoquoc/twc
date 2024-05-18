@@ -1,12 +1,11 @@
-import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { Inter, Faster_One } from "next/font/google";
-import Script from "next/script";
+import { Faster_One, Inter } from "next/font/google";
 
 import SiteFooter from "@/components/layout/site-footer";
-import BackgroundImage from "../../public/assets/images/twc_background.webp";
 import { gta } from "@/configs/fonts";
+import BackgroundImage from "../../public/assets/images/twc_background.webp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,9 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US" suppressHydrationWarning>
-      <head>
-        <link rel="stylesheet" href="assets/css/app.min.css" />
-      </head>
+      <head />
       <body
         className={cn(
           `${inter.className} ${gta.variable} ${fasterOne.variable}`

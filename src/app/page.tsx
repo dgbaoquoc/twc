@@ -25,39 +25,40 @@ export default function Home() {
   return (
     <main>
       <section className="flex justify-center">
-        <Logo className="animate-jump-in size-[170px] lg:size-[240px]" />
+        <Logo className="animate-rotate-x size-[170px] lg:size-[240px]" />
       </section>
 
-      <section className="py-2 overflow-hidden bg-black">
-        <div className="w-full inline-flex flex-nowrap">
-          <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-            {Array(5)
-              .fill(0)
-              .map((_, i) => (
-                <li key={i}>
-                  <h3 className="text-[35px] tracking-tighter whitespace-nowrap px-6 font-gta font-semibold italic uppercase text-white">
-                    A WALKING BILLBOARD
-                  </h3>
-                </li>
-              ))}
-          </ul>
-        </div>
+      <section className="py-2 overflow-hidden bg-black space-x-16">
+        <ul
+          className="flex items-center justify-center md:justify-start [&_li]:mx-8 gap-x-32  
+          animate-infinite-scroll"
+        >
+          {Array(12)
+            .fill(0)
+            .map((_, i) => (
+              <li
+                key={i}
+                className="text-[35px] tracking-tighter whitespace-nowrap px-6 font-gta font-semibold italic uppercase text-white"
+              >
+                A WALKING BILLBOARD
+              </li>
+            ))}
+        </ul>
       </section>
 
       <section className="relative grid lg:grid-cols-2 place-items-center py-10 gap-y-10 lg:py-[120px]">
-        <div className="space-y-2 relative hover:scale-110 transition delay-150 ease-in-out">
+        <div className="space-y-2 relative hover:scale-125 transition">
           <h1 className="font-gta font-bold text-[50px]">MEDIA</h1>
-          <EyeSVG className="absolute -top-8 right-[2.5rem] lg:right-[6.5rem]" />
+          <EyeSVG className="absolute -top-4 right-[20%]" />
           <SolutionSVG className="mx-auto" />
         </div>
-        <div className="space-y-2 relative hover:scale-110 transition delay-150 ease-in-out">
+        <div className="space-y-2 relative hover:scale-125 transition">
           <h1 className="font-gta font-bold text-[50px]">MARKETING</h1>
           <BikiniCatSVG className="absolute -bottom-4 -right-10" />
           <SolutionSVG className="mx-auto" />
         </div>
       </section>
 
-      {/* <Projects /> */}
       <div
         style={{
           marginLeft: "calc(50% - 50vw) !important",
@@ -109,8 +110,8 @@ export default function Home() {
                             </div>
                             <img
                               className="grid__item-img grid__item-img--large"
-                              src="/assets/images/projects/twc.webp"
-                              alt=""
+                              src={project.image}
+                              alt={project.title}
                             />
                           </div>
                         </div>
@@ -151,7 +152,7 @@ export default function Home() {
       <section className="mt-10 py-2 overflow-hidden bg-black">
         <div className="w-full inline-flex flex-nowrap">
           <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-            {Array(3)
+            {Array(5)
               .fill(0)
               .map((_, i) => (
                 <React.Fragment key={i}>

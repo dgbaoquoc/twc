@@ -14,7 +14,7 @@ export default function SiteFooter() {
     <footer className="container py-10">
       <section className="grid grid-cols-3">
         <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-y-4 md:flex-row">
+          <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-10">
             <Link
               href="/"
               className="font-gta text-xs md:text-sm font-medium uppercase text-black mr-6"
@@ -25,7 +25,7 @@ export default function SiteFooter() {
               href="/"
               className="font-gta text-xs md:text-sm font-medium uppercase text-black cursor-not-allowed"
             >
-              Magazine <span className="text-xs">(coming soon...)</span>
+              Magazine 🔒
             </Link>
           </div>
           <Link
