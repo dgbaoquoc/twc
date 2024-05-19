@@ -5,6 +5,7 @@ import { BikiniCatSVG, EyeSVG, SolutionSVG } from "@/components/icons";
 import React from "react";
 import InstagramPosts from "./_components/instagram-posts";
 import { Logo } from "@/components/logo";
+import ContactForm from "@/components/contact-form";
 
 const projects = [
   {
@@ -136,15 +137,15 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="relative aspect-[3/1] mx-auto w-[90%] animate-fade-up">
+      <section className="relative aspect-[0.6] lg:aspect-[3/1] mx-auto w-[90%] animate-fade-up">
         <Teams />
-        <div className="z-10 absolute top-[25%] left-[60%] hidden lg:block">
-          <p className="text-balance text-white max-w-[300px] font-semibold">
+        <div className="z-10 absolute bottom-[8%] left-[24%] lg:top-[25%] lg:left-[67%]">
+          <p className="font-epilogue text-[16px] lg:text-[24px] text-balance text-white font-semibold">
             We are designated to export Viet culture across the globe and help
             international play a part in.
             <br />
             <br />
-            Mr. Tran Huy Tung
+            <span className="font-normal">Mr. Tran Huy Tung</span>
           </p>
         </div>
       </section>
@@ -177,8 +178,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="ig-posts" className="section">
+      <section id="ig-posts" className="mb-10">
         <InstagramPosts />
+      </section>
+
+      <section id="contact-form">
+        <div className="container relative max-w-screen-lg py-10 flex flex-col gap-y-10">
+          <Image
+            src="/assets/images/vietnam.png"
+            alt="Vietnam map"
+            fill
+            className="object-contain -z-10"
+            unoptimized
+          />
+          <div>
+            <h3 className="font-epilogue uppercase text-[24px]">
+              Let&apos;s conquer
+              <br />
+              <span className="font-extrabold font-epilogue">
+                Vietnam market together
+              </span>
+            </h3>
+          </div>
+          <ContactForm />
+        </div>
       </section>
     </main>
   );

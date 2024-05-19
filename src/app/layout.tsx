@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Faster_One, Inter } from "next/font/google";
 
@@ -26,10 +26,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
 }>) {
   return (
     <html lang="en-US" suppressHydrationWarning>
