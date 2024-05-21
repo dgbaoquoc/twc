@@ -2,12 +2,13 @@ import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { socials } from "@/configs/site";
 import Image from "next/image";
 import Link from "next/link";
-
-import Anh1 from "@/public/assets/images/logo/footers/1.svg";
-import Anh2 from "@/public/assets/images/logo/footers/2.svg";
-import Anh3 from "@/public/assets/images/logo/footers/3.svg";
-import HipHub from "@/public/assets/images/logo/footers/hiphub.svg";
 import { Logo } from "../logo";
+
+import Anh1 from "@/public/assets/images/logo/footers/tp.png";
+import Anh2 from "@/public/assets/images/logo/footers/hiphub.png";
+import Anh3 from "@/public/assets/images/logo/footers/cham-cuu.png";
+import Anh4 from "@/public/assets/images/logo/footers/cham-cuu-2.png";
+import Anh5 from "@/public/assets/images/logo/footers/twc-white.png";
 
 export default function SiteFooter() {
   return (
@@ -53,11 +54,20 @@ export default function SiteFooter() {
                     TWC HAS HAD THE PLEASURE OF WORKING WITH SOME TOP NOTCH
                     BRAND. THE LIKES OF:
                   </p>
-                  <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-4">
-                    <Image className="shrink-0" src={Anh1} alt="Anh 1" />
-                    <Image className="shrink-0" src={HipHub} alt="Hiphub" />
-                    <Image className="shrink-0" src={Anh2} alt="Anh 2" />
-                    <Image className="shrink-0" src={Anh3} alt="Anh 3" />
+                  <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] place-items-center gap-4">
+                    <Image className="shrink-0" src={Anh1} alt="TPBank" />
+                    <Image className="shrink-0" src={Anh2} alt="Hiphub" />
+                    <Image
+                      className="shrink-0"
+                      src={Anh3}
+                      alt="Benh vien tram cuu"
+                    />
+                    <Image
+                      className="shrink-0"
+                      src={Anh4}
+                      alt="Benh vien tram cuu 2"
+                    />
+                    <Image className="shrink-0" src={Anh5} alt="TWC" />
                   </div>
                 </div>
               </div>

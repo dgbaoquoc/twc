@@ -10,15 +10,15 @@ import ContactForm from "@/components/contact-form";
 const projects = [
   {
     title: "M8 Stimulator",
-    image: "/assets/images/projects/M8.webp",
+    image: "/assets/images/projects/project-1.webp",
   },
   {
     title: "Visa Flash 2in1",
-    image: "/assets/images/projects/TP.webp",
+    image: "/assets/images/projects/project-2.webp",
   },
   {
     title: "Nature Therapy",
-    image: "/assets/images/projects/vien-y-hoc-co-truyen.webp",
+    image: "/assets/images/projects/project-3.webp",
   },
 ];
 
@@ -32,9 +32,9 @@ export default function Home() {
       <section className="py-2 overflow-hidden bg-black space-x-16">
         <ul
           className="flex items-center justify-center md:justify-start [&_li]:mx-8 gap-x-32  
-          animate-infinite-scroll"
+          animate-infinite-scroll-10"
         >
-          {Array(12)
+          {Array(20)
             .fill(0)
             .map((_, i) => (
               <li
@@ -137,10 +137,10 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="relative aspect-[0.6] lg:aspect-[3/1] mx-auto w-[90%] animate-fade-up">
+      <section className="relative aspect-[0.6] lg:aspect-[3/1] flex-grid animate-fade-up">
         <Teams />
         <div className="z-10 absolute bottom-[8%] left-[24%] lg:top-[25%] lg:left-[67%]">
-          <p className="font-epilogue text-[16px] lg:text-[24px] text-balance text-white font-semibold">
+          <p className="font-epilogue max-w-[369px] text-[16px] lg:text-[24px] text-balance text-white font-semibold">
             We are designated to export Viet culture across the globe and help
             international play a part in.
             <br />
@@ -152,27 +152,24 @@ export default function Home() {
 
       <section className="mt-10 py-2 overflow-hidden bg-black">
         <div className="w-full inline-flex flex-nowrap">
-          <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-            {Array(5)
+          <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 gap-x-32 animate-infinite-scroll-20">
+            {Array(20)
               .fill(0)
               .map((_, i) => (
-                <React.Fragment key={i}>
-                  <li>
-                    <h3 className="text-[35px] tracking-tighter whitespace-nowrap px-6 font-epilogue font-light italic text-primary">
-                      We have the{" "}
-                      <span className="font-bold uppercase">
-                        MARKET FOR YOUR BRAND
-                      </span>{" "}
-                    </h3>
-                  </li>
-                  <li>
-                    <h3 className="text-[35px] tracking-tighter whitespace-nowrap px-6 font-epilogue font-light italic text-primary">
-                      Let people{" "}
-                      <span className="font-bold uppercase">AWARE OF YOU</span>{" "}
-                      every single day
-                    </h3>
-                  </li>
-                </React.Fragment>
+                <li
+                  key={i}
+                  className="text-[35px] tracking-tighter whitespace-nowrap px-6 font-epilogue font-light italic text-white"
+                >
+                  We have the{" "}
+                  <span className="font-bold uppercase">
+                    MARKET FOR YOUR BRAND
+                  </span>{" "}
+                  <span className="ml-20">
+                    Let people{" "}
+                    <span className="font-bold uppercase">AWARE OF YOU</span>{" "}
+                    every single day
+                  </span>
+                </li>
               ))}
           </ul>
         </div>

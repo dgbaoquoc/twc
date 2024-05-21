@@ -40,7 +40,6 @@ export default function RootLayout({
           backgroundImage: `url(${BackgroundImage.src})`,
           width: "100%",
           height: "100%",
-          backgroundSize: "cover",
         }}
       >
         {children}

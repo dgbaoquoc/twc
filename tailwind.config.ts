@@ -77,7 +77,8 @@ const config = {
         },
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 20s linear infinite",
+        "infinite-scroll-10": "infinite-scroll 10s linear infinite",
+        "infinite-scroll-20": "infinite-scroll 100s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

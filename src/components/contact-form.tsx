@@ -64,7 +64,7 @@ export default function ContactForm() {
                 <Input
                   placeholder="Your Email"
                   {...field}
-                  className="bg-transparent border-none placeholder:text-slate-800"
+                  className="bg-transparent border-none placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
                 />
               </FormControl>
               <FormMessage />
