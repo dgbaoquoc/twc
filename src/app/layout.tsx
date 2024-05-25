@@ -6,6 +6,7 @@ import { Faster_One, Inter } from "next/font/google";
 import SiteFooter from "@/components/layout/site-footer";
 import { gta } from "@/configs/fonts";
 import BackgroundImage from "../../public/assets/images/twc_background.webp";
+import { siteConfig } from "@/configs/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,8 +21,29 @@ const fasterOne = Faster_One({
 });
 
 export const metadata: Metadata = {
-  title: "TWC",
-  description: "Agency",
+  metadataBase: new URL(siteConfig.publicUrl),
+  title: siteConfig.title,
+  description: siteConfig.description,
+  robots: {
+    follow: true,
+    index: true,
+  },
+  keywords: [
+    "twc",
+    "marketting",
+    "media",
+    "agency",
+    "marketing agency",
+    "branding",
+  ],
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.publicUrl,
+    siteName: siteConfig.title,
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-US" suppressHydrationWarning>
+    <html lang="en-US" suppressHydrationWarning className="scrollbar-hide">
       <head />
       <body
         className={cn(

@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div
+      <section
         style={{
           marginLeft: "calc(50% - 50vw) !important",
           marginRight: "calc(50% - 50vw) !important",
@@ -69,7 +69,7 @@ export default function Home() {
         }}
       >
         <div
-          className="light-section"
+          className="light-section relative"
           style={{
             paddingBottom: "8vw",
             marginLeft: "calc(50% - 50vw) !important",
@@ -135,15 +135,20 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <section className="relative aspect-[0.6] lg:aspect-[3/1] flex-grid animate-fade-up">
+      <section className="relative aspect-[0.6] lg:aspect-[6] flex-grid animate-fade-up">
         <Teams />
         <div className="z-10 absolute bottom-[8%] left-[24%] lg:top-[25%] lg:left-[67%]">
-          <p className="font-epilogue max-w-[369px] text-[16px] lg:text-[24px] text-balance text-white font-semibold">
+          <p
+            className="max-w-[369px] text-[16px] lg:text-[20px] text-balance text-white"
+            style={{
+              fontFamily: "Epilogue",
+              fontWeight: 700,
+            }}
+          >
             We are designated to export Viet culture across the globe and help
             international play a part in.
-            <br />
             <br />
             <span className="font-normal">Mr. Tran Huy Tung</span>
           </p>
@@ -158,7 +163,10 @@ export default function Home() {
               .map((_, i) => (
                 <li
                   key={i}
-                  className="text-[35px] tracking-tighter whitespace-nowrap px-6 font-epilogue font-light italic text-white"
+                  className="text-[35px] tracking-tighter whitespace-nowrap px-6 font-light italic text-white"
+                  style={{
+                    fontFamily: "Epilogue",
+                  }}
                 >
                   We have the{" "}
                   <span className="font-bold uppercase">
@@ -189,11 +197,16 @@ export default function Home() {
             unoptimized
           />
           <div>
-            <h3 className="font-epilogue uppercase text-[24px]">
+            <h3 className="uppercase text-[24px]">
               Let&apos;s conquer
               <br />
-              <span className="font-extrabold font-epilogue">
-                Vietnam market together
+              <span
+                style={{
+                  fontFamily: "Epilogue",
+                  fontWeight: 800,
+                }}
+              >
+                Vietnam market <br /> together
               </span>
             </h3>
           </div>
