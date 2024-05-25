@@ -85,9 +85,9 @@ export default function Home() {
               style={{ zIndex: 0 }}
             >
               {/* Portfolio Wrap */}
-              <div className="portfolio-wrap flex-grid content-full-width fade-scaleout-effect">
+              <div className="portfolio-wrap flex-grid px-10 pr-0 content-full-width fade-scaleout-effect">
                 {/* Portfolio Columns */}
-                <div className="portfolio">
+                <div className="portfolio justify-around">
                   {projects.map((project, i) => (
                     <div
                       className="item wide trigger-item branding design active"
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative aspect-[0.6] lg:aspect-[6] flex-grid animate-fade-up">
+      <section className="relative aspect-[0.6] lg:aspect-[6] flex-grid px-10 animate-fade-up">
         <Teams />
         <div className="z-10 absolute bottom-[8%] left-[24%] lg:top-[25%] lg:left-[67%]">
           <p
