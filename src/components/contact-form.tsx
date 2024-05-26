@@ -70,7 +70,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-w-screen-lg grid gap-8 lg:gap-16 lg:grid-cols-2"
+        className="max-w-screen-lg contents lg:grid gap-8 lg:gap-16 lg:grid-cols-2"
       >
         <FormField
           control={form.control}
