@@ -48,13 +48,17 @@ export default function Home() {
       </section>
 
       <section className="relative grid lg:grid-cols-2 place-items-center py-10 gap-y-10 lg:py-[120px]">
-        <div className="space-y-2 relative hover:scale-125 transition">
-          <h1 className="font-gta font-bold text-[50px]">MEDIA</h1>
+        <div className="space-y-2 relative hover:scale-110 lg:hover:scale-125 transition">
+          <h1 className="font-gta font-bold  text-[35px] lg:text-[50px]">
+            MEDIA
+          </h1>
           <EyeSVG className="absolute -top-4 right-[20%]" />
           <SolutionSVG className="mx-auto" />
         </div>
-        <div className="space-y-2 relative hover:scale-125 transition">
-          <h1 className="font-gta font-bold text-[50px]">MARKETING</h1>
+        <div className="space-y-2 relative hover:scale-110 lg:hover:scale-125 transition">
+          <h1 className="font-gta font-bold  text-[35px] lg:text-[50px]">
+            MARKETING
+          </h1>
           <BikiniCatSVG className="absolute -bottom-4 -right-10" />
           <SolutionSVG className="mx-auto" />
         </div>
@@ -137,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative aspect-[0.6] lg:aspect-[6] flex-grid px-10 animate-fade-up">
+      <section className="relative aspect-[0.6] lg:aspect-[4] flex-grid px-10 animate-fade-up">
         <Teams />
         <div className="z-10 absolute bottom-[8%] left-[24%] lg:top-[25%] lg:left-[67%]">
           <p
@@ -149,6 +153,7 @@ export default function Home() {
           >
             We are designated to export Viet culture across the globe and help
             international play a part in.
+            <br />
             <br />
             <span className="font-normal">Mr. Tran Huy Tung</span>
           </p>
