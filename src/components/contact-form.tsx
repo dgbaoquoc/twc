@@ -1,30 +1,64 @@
 "use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Textarea } from "./ui/textarea";
 
 const contactSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  firstName: z
+    .string({
+      message: "Please enter your first name",
+    })
+    .max(50, {
+      message: "First name must be less than 50 characters",
+    }),
+  lastName: z
+    .string({
+      message: "Please enter your last name",
+    })
+    .max(50, {
+      message: "Last name must be less than 50 characters",
+    }),
+  company: z.string({
+    message: "Please enter your company name",
   }),
+  title: z.string({
+    message: "Please enter your title",
+  }),
+  email: z
+    .string({
+      message: "Please enter your email",
+    })
+    .email({
+      message: "Please enter a valid email address",
+    }),
+  region: z.string({
+    message: "Please enter your region",
+  }),
+  category: z.enum(["", "media", "marketing"]).default(""),
+  message: z
+    .string({
+      message: "Please enter your message",
+    })
+    .max(500, {
+      message: "Message must be less than 500 characters",
+    }),
 });
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      username: "",
+      category: "",
     },
   });
 
@@ -40,14 +74,14 @@ export default function ContactForm() {
       >
         <FormField
           control={form.control}
-          name="username"
+          name="firstName"
           render={({ field }) => (
             <FormItem className="border-b-2 border-b-slate-800">
               <FormControl>
                 <Input
-                  placeholder="What’s Your Name"
+                  placeholder="First Name"
                   {...field}
-                  className="bg-transparent border-none placeholder:text-slate-800"
+                  className="bg-transparent border-none uppercase placeholder:text-slate-800"
                 />
               </FormControl>
 
@@ -57,14 +91,14 @@ export default function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="username"
+          name="lastName"
           render={({ field }) => (
             <FormItem className="border-b-2 border-b-slate-800">
               <FormControl>
                 <Input
-                  placeholder="Your Email"
+                  placeholder="Last Name"
                   {...field}
-                  className="bg-transparent border-none placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
                 />
               </FormControl>
               <FormMessage />
@@ -73,14 +107,101 @@ export default function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="username"
+          name="company"
+          render={({ field }) => (
+            <FormItem className="border-b-2 border-b-slate-800">
+              <FormControl>
+                <Input
+                  placeholder="Company"
+                  {...field}
+                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="title"
+          render={({ field }) => (
+            <FormItem className="border-b-2 border-b-slate-800">
+              <FormControl>
+                <Input
+                  placeholder="Title"
+                  {...field}
+                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem className="border-b-2 border-b-slate-800">
+              <FormControl>
+                <Input
+                  placeholder="Email"
+                  {...field}
+                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="region"
+          render={({ field }) => (
+            <FormItem className="border-b-2 border-b-slate-800">
+              <FormControl>
+                <Input
+                  placeholder="Region"
+                  {...field}
+                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="category"
           render={({ field }) => (
             <FormItem className="col-span-2 border-b-2 border-b-slate-800">
               <FormControl>
-                <Input
-                  placeholder="Tell Us About Your Project"
+                <select
+                  className="w-full bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent focus:outline-none px-3 py-2"
+                  onChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <option value="">
+                    Choose the category that best describes your inquiry
+                  </option>
+                  <option value="media">Media Solution</option>
+                  <option value="marketing">Marketing Solution</option>
+                </select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem className="col-span-2 border-b-2 border-b-slate-800">
+              <FormControl>
+                <Textarea
                   {...field}
-                  className="bg-transparent border-none placeholder:text-slate-800"
+                  rows={5}
+                  placeholder="How can we help your brand?"
+                  className="bg-transparent border-none uppercase placeholder:text-slate-800"
                 />
               </FormControl>
               <FormMessage />

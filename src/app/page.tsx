@@ -193,7 +193,7 @@ export default function Home() {
             src="/assets/images/vietnam.png"
             alt="Vietnam map"
             fill
-            className="object-contain -z-10"
+            className="object-contain -z-10 opacity-40"
             unoptimized
           />
           <div>
