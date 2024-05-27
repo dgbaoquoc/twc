@@ -82,7 +82,7 @@ export default function SiteFooter() {
         </p>
         <ul className="flex gap-8">
           {socials.map((social, idx) => (
-            <li key={idx} className="relative size-[16px] md:size-[32px]">
+            <li key={idx} className="relative size-[16px] md:size-[24px]">
               <Link href={social.href} target="_blank">
                 <Image
                   unoptimized

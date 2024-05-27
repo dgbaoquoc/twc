@@ -1,6 +1,6 @@
 export const siteConfig = {
   publicUrl: "https://twccom.co",
-  title: "TWC | A WALKING BILLBOARD",
+  title: "TWC Communication | A WALKING BILLBOARD",
   description:
     "We are designated to export Viet culture across the globe and help international play a part in.",
 };
