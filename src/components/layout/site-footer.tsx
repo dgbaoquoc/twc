@@ -2,7 +2,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { socials } from "@/configs/site";
 import Image from "next/image";
 import Link from "next/link";
-import { Logo } from "../logo";
+import { LogoFooter } from "@/components/logo";
 
 import Anh1 from "@/public/assets/images/logo/footers/tp.png";
 import Anh2 from "@/public/assets/images/logo/footers/hiphub.png";
@@ -18,30 +18,30 @@ export default function SiteFooter() {
           <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-10">
             <Link
               href="/"
-              className="font-gta text-xs md:text-sm font-medium uppercase text-black mr-6"
+              className="mr-6 font-gta text-xs font-medium uppercase text-black md:text-sm"
             >
               About
             </Link>
             <Link
               href="/"
-              className="font-gta text-xs md:text-sm font-medium uppercase text-black cursor-not-allowed"
+              className="cursor-not-allowed font-gta text-xs font-medium uppercase text-black md:text-sm"
             >
               Magazine 🔒
             </Link>
           </div>
           <Link
             href="/"
-            className="font-gta text-xs md:text-sm font-medium uppercase text-black"
+            className="font-gta text-xs font-medium uppercase text-black md:text-sm"
           >
             Contact
           </Link>
         </div>
         <div className="flex justify-center">
-          <Logo className="-mt-4 size-[140px]" />
+          <LogoFooter className="size-[140px] animate-rotate-x" />
         </div>
         <div className="flex items-start justify-end">
           <Drawer>
-            <DrawerTrigger className="font-gta text-xs md:text-sm font-medium uppercase text-black">
+            <DrawerTrigger className="font-gta text-xs font-medium uppercase text-black md:text-sm">
               Clients
             </DrawerTrigger>
             <DrawerContent
@@ -50,7 +50,7 @@ export default function SiteFooter() {
             >
               <div className="container p-6">
                 <div className="flex flex-col gap-4">
-                  <p className="w-full md:w-1/3 font-epilogue font-bold text-xs">
+                  <p className="w-full font-epilogue text-xs font-bold md:w-1/3">
                     TWC HAS HAD THE PLEASURE OF WORKING WITH SOME TOP NOTCH
                     BRAND. THE LIKES OF:
                   </p>
@@ -76,8 +76,8 @@ export default function SiteFooter() {
         </div>
       </section>
 
-      <section className="flex items-center  flex-col md:flex-row mt-10 justify-between">
-        <p className="font-gta text-xs md:text-sm font-light flex-1">
+      <section className="mt-10 flex  flex-col items-center justify-between md:flex-row">
+        <p className="flex-1 font-gta text-xs font-light md:text-sm">
           © TWC your friendly Vietnamese Agency Since 2022 ✷
         </p>
         <ul className="flex gap-8">

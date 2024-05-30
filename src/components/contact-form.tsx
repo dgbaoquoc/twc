@@ -5,6 +5,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -70,7 +71,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-w-screen-lg contents lg:grid gap-8 lg:gap-16 lg:grid-cols-2"
+        className="contents gap-8 lg:grid lg:grid-cols-2 lg:gap-16"
       >
         <FormField
           control={form.control}
@@ -81,7 +82,7 @@ export default function ContactForm() {
                 <Input
                   placeholder="First Name"
                   {...field}
-                  className="bg-transparent border-none uppercase placeholder:text-slate-800"
+                  className="border-none bg-transparent uppercase placeholder:text-slate-800"
                 />
               </FormControl>
 
@@ -98,7 +99,7 @@ export default function ContactForm() {
                 <Input
                   placeholder="Last Name"
                   {...field}
-                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                  className="border-none bg-transparent uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
                 />
               </FormControl>
               <FormMessage />
@@ -114,7 +115,7 @@ export default function ContactForm() {
                 <Input
                   placeholder="Company"
                   {...field}
-                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                  className="border-none bg-transparent uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
                 />
               </FormControl>
               <FormMessage />
@@ -130,7 +131,7 @@ export default function ContactForm() {
                 <Input
                   placeholder="Title"
                   {...field}
-                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                  className="border-none bg-transparent uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
                 />
               </FormControl>
               <FormMessage />
@@ -146,7 +147,7 @@ export default function ContactForm() {
                 <Input
                   placeholder="Email"
                   {...field}
-                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                  className="border-none bg-transparent uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
                 />
               </FormControl>
               <FormMessage />
@@ -162,7 +163,7 @@ export default function ContactForm() {
                 <Input
                   placeholder="Region"
                   {...field}
-                  className="bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
+                  className="border-none bg-transparent uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent"
                 />
               </FormControl>
               <FormMessage />
@@ -176,7 +177,7 @@ export default function ContactForm() {
             <FormItem className="col-span-2 border-b-2 border-b-slate-800">
               <FormControl>
                 <select
-                  className="w-full bg-transparent border-none uppercase placeholder:text-slate-800 focus-visible:ring-0 focus-visible:ring-offset-transparent focus:outline-none px-3 py-2"
+                  className="w-full border-none bg-transparent px-3 py-2 uppercase placeholder:text-slate-800 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-transparent"
                   onChange={field.onChange}
                   defaultValue={field.value}
                 >
@@ -199,9 +200,8 @@ export default function ContactForm() {
               <FormControl>
                 <Textarea
                   {...field}
-                  rows={5}
                   placeholder="How can we help your brand?"
-                  className="bg-transparent border-none uppercase placeholder:text-slate-800"
+                  className="border-none bg-transparent uppercase placeholder:text-slate-800"
                 />
               </FormControl>
               <FormMessage />
@@ -210,7 +210,7 @@ export default function ContactForm() {
         />
         <Button
           type="submit"
-          className="ml-auto col-span-2 bg-transparent border-slate-800 border-2 rounded-3xl
+          className="col-span-2 ml-auto rounded-3xl border-2 border-slate-800 bg-transparent
         "
         >
           Send Message

@@ -145,7 +145,7 @@ export default function Home() {
         <Teams />
         <div className="absolute bottom-[2rem] left-[1/2] translate-x-1/4 transform lg:right-1/4 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-1/4">
           <p
-            className="max-w-[369px] text-balance text-white lg:text-[24px]"
+            className="max-w-[400px] text-balance text-white lg:text-[24px]"
             style={{
               fontFamily: "Epilogue",
               fontWeight: 700,
@@ -213,7 +213,7 @@ export default function Home() {
             src="/assets/images/vietnam.png"
             alt="Vietnam map"
             fill
-            className="-z-10 m-auto !h-[90%] object-contain opacity-80"
+            className="-z-10 m-auto !h-[80%] object-contain opacity-80"
             unoptimized
           />
           <div>
