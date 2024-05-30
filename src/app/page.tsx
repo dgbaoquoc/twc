@@ -4,7 +4,6 @@ import Teams from "./_components/teams";
 import { BikiniCatSVG, EyeSVG, SolutionSVG } from "@/components/icons";
 import React from "react";
 import InstagramPosts from "./_components/instagram-posts";
-import { Logo } from "@/components/logo";
 import ContactForm from "@/components/contact-form";
 import Marquee from "@/components/ui/marquee";
 
@@ -27,7 +26,14 @@ export default function Home() {
   return (
     <main>
       <section className="flex justify-center">
-        <Logo className="size-[170px] animate-rotate-x lg:size-[240px]" />
+        <Image
+          priority
+          src="/logo.png"
+          alt="TWC Logo"
+          width={170}
+          height={170}
+          className="animate-rotate-x"
+        />
       </section>
 
       <section className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black py-2">

@@ -8,7 +8,6 @@ import Anh2 from "@/public/assets/images/logo/footers/hiphub.png";
 import Anh3 from "@/public/assets/images/logo/footers/cham-cuu.png";
 import Anh4 from "@/public/assets/images/logo/footers/cham-cuu-2.png";
 import Anh5 from "@/public/assets/images/logo/footers/twc-white.png";
-import { Logo } from "../logo";
 
 export default function SiteFooter() {
   return (
@@ -37,7 +36,13 @@ export default function SiteFooter() {
           </Link>
         </div>
         <div className="flex justify-center">
-          <Logo className="size-[140px]" />
+          <Image
+            unoptimized
+            src="/logo.png"
+            alt="TWC Logo"
+            width={140}
+            height={140}
+          />
         </div>
         <div className="flex items-start justify-end">
           <Drawer>
@@ -76,7 +81,7 @@ export default function SiteFooter() {
         </div>
       </section>
 
-      <section className="mt-10 flex  flex-col items-center justify-between md:flex-row">
+      <section className="mt-10 flex flex-col items-center justify-between gap-4 md:flex-row">
         <p className="flex-1 font-gta text-xs font-light md:text-sm">
           © TWC your friendly Vietnamese Agency Since 2022 ✷
         </p>
