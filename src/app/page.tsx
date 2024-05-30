@@ -6,6 +6,7 @@ import React from "react";
 import InstagramPosts from "./_components/instagram-posts";
 import { Logo } from "@/components/logo";
 import ContactForm from "@/components/contact-form";
+import Marquee from "@/components/ui/marquee";
 
 const projects = [
   {
@@ -29,22 +30,19 @@ export default function Home() {
         <Logo className="size-[170px] animate-rotate-x lg:size-[240px]" />
       </section>
 
-      <section className="space-x-16 overflow-hidden bg-black py-2">
-        <ul
-          className="flex animate-infinite-scroll-10 items-center justify-center gap-x-32 md:justify-start  
-          [&_li]:mx-8"
-        >
-          {Array(20)
+      <section className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black py-2">
+        <Marquee className="[--duration:20s]">
+          {Array(6)
             .fill(0)
             .map((_, i) => (
-              <li
+              <p
                 key={i}
-                className="whitespace-nowrap px-6 font-gta text-[35px] font-semibold uppercase italic tracking-tighter text-white"
+                className="whitespace-nowrap px-20 font-gta text-[35px] font-semibold uppercase italic tracking-tighter text-white"
               >
                 A WALKING BILLBOARD
-              </li>
+              </p>
             ))}
-        </ul>
+        </Marquee>
       </section>
 
       <section className="relative grid place-items-center gap-y-10 py-10 lg:grid-cols-2 lg:py-[120px]">
@@ -143,9 +141,9 @@ export default function Home() {
 
       <section className="flex-grid relative aspect-[0.8] max-h-[80vh] animate-fade-up px-10 lg:aspect-[4]">
         <Teams />
-        <div className="absolute bottom-[2rem] left-[1/2] translate-x-1/4 transform lg:right-1/4 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-1/4">
+        <div className="absolute bottom-[2rem] left-[10%] translate-x-[16%] transform lg:left-[50%] lg:right-[15%] lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-[25%]">
           <p
-            className="max-w-[400px] text-balance text-white lg:text-[24px]"
+            className="max-w-[60vw] text-balance text-white lg:max-w-[400px] lg:text-[24px]"
             style={{
               fontFamily: "Epilogue",
               fontWeight: 700,
@@ -155,7 +153,7 @@ export default function Home() {
             international play a part in.
             <span
               style={{
-                marginTop: "1rem",
+                marginTop: "1.5rem",
                 display: "block",
                 fontFamily: "Epilogue",
                 fontWeight: 300,
@@ -167,40 +165,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-10 overflow-hidden bg-black py-2">
-        <div className="inline-flex w-full flex-nowrap">
-          <ul className="flex animate-infinite-scroll-20 items-center justify-center gap-x-32 md:justify-start [&_li]:mx-8">
-            {Array(10)
-              .fill(0)
-              .map((_, i) => (
-                <React.Fragment key={i}>
-                  <li
-                    className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
-                    style={{
-                      fontFamily: "Epilogue",
-                    }}
-                  >
-                    We have the{" "}
-                    <span className="font-bold uppercase">
-                      MARKET FOR YOUR BRAND
-                    </span>{" "}
-                  </li>
-                  <li
-                    className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
-                    style={{
-                      fontFamily: "Epilogue",
-                    }}
-                  >
-                    <span className="">
-                      Let people{" "}
-                      <span className="font-bold uppercase">AWARE OF YOU</span>{" "}
-                      every single day
-                    </span>
-                  </li>
-                </React.Fragment>
-              ))}
-          </ul>
-        </div>
+      <section className="relative mt-10 flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black py-2">
+        <Marquee className="[--duration:20s]">
+          {Array(3)
+            .fill(0)
+            .map((_, i) => (
+              <p
+                key={i}
+                className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
+                style={{
+                  fontFamily: "Epilogue",
+                }}
+              >
+                We have the{" "}
+                <span className="font-bold uppercase">
+                  MARKET FOR YOUR BRAND
+                </span>{" "}
+                <span
+                  className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
+                  style={{
+                    fontFamily: "Epilogue",
+                  }}
+                >
+                  <span className="">
+                    Let people{" "}
+                    <span className="font-bold uppercase">AWARE OF YOU</span>{" "}
+                    every single day
+                  </span>
+                </span>
+              </p>
+            ))}
+        </Marquee>
       </section>
 
       <section id="ig-posts" className="mb-10">
@@ -208,7 +203,7 @@ export default function Home() {
       </section>
 
       <section id="contact-form">
-        <div className="relative mx-auto flex max-w-screen-xl flex-col gap-y-10 py-10">
+        <div className="relative mx-auto flex max-w-screen-xl flex-col gap-y-10 px-4 py-10">
           <Image
             src="/assets/images/vietnam.png"
             alt="Vietnam map"

@@ -63,10 +63,6 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
-        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -75,10 +71,14 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
       },
       animation: {
-        "infinite-scroll-10": "infinite-scroll 10s linear infinite",
-        "infinite-scroll-20": "infinite-scroll 100s linear infinite",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
