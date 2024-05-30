@@ -2,13 +2,13 @@ import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { socials } from "@/configs/site";
 import Image from "next/image";
 import Link from "next/link";
-import { LogoFooter } from "@/components/logo";
 
 import Anh1 from "@/public/assets/images/logo/footers/tp.png";
 import Anh2 from "@/public/assets/images/logo/footers/hiphub.png";
 import Anh3 from "@/public/assets/images/logo/footers/cham-cuu.png";
 import Anh4 from "@/public/assets/images/logo/footers/cham-cuu-2.png";
 import Anh5 from "@/public/assets/images/logo/footers/twc-white.png";
+import { Logo } from "../logo";
 
 export default function SiteFooter() {
   return (
@@ -37,7 +37,7 @@ export default function SiteFooter() {
           </Link>
         </div>
         <div className="flex justify-center">
-          <LogoFooter className="size-[140px] animate-rotate-x" />
+          <Logo className="size-[140px]" />
         </div>
         <div className="flex items-start justify-end">
           <Drawer>
