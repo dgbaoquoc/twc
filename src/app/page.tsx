@@ -37,17 +37,10 @@ export default function Home() {
       </section>
 
       <section className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black py-2">
-        <Marquee className="[--duration:20s]">
-          {Array(6)
-            .fill(0)
-            .map((_, i) => (
-              <p
-                key={i}
-                className="whitespace-nowrap px-20 font-gta text-[35px] font-semibold uppercase italic tracking-tighter text-white"
-              >
-                A WALKING BILLBOARD
-              </p>
-            ))}
+        <Marquee className="[--duration:4s]">
+          <p className="mx-20 whitespace-nowrap font-gta text-[35px] font-semibold uppercase italic tracking-tighter text-white">
+            A WALKING BILLBOARD
+          </p>
         </Marquee>
       </section>
 
@@ -172,35 +165,28 @@ export default function Home() {
       </section>
 
       <section className="relative mt-10 flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black py-2">
-        <Marquee className="[--duration:20s]">
-          {Array(3)
-            .fill(0)
-            .map((_, i) => (
-              <p
-                key={i}
-                className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
-                style={{
-                  fontFamily: "Epilogue",
-                }}
-              >
-                We have the{" "}
-                <span className="font-bold uppercase">
-                  MARKET FOR YOUR BRAND
-                </span>{" "}
-                <span
-                  className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
-                  style={{
-                    fontFamily: "Epilogue",
-                  }}
-                >
-                  <span className="">
-                    Let people{" "}
-                    <span className="font-bold uppercase">AWARE OF YOU</span>{" "}
-                    every single day
-                  </span>
-                </span>
-              </p>
-            ))}
+        <Marquee className="[--duration:6s]">
+          <p
+            className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
+            style={{
+              fontFamily: "Epilogue",
+            }}
+          >
+            We have the{" "}
+            <span className="font-bold uppercase">MARKET FOR YOUR BRAND</span>{" "}
+            <span
+              className="whitespace-nowrap px-6 text-[35px] font-light italic tracking-tighter text-white"
+              style={{
+                fontFamily: "Epilogue",
+              }}
+            >
+              <span className="">
+                Let people{" "}
+                <span className="font-bold uppercase">AWARE OF YOU</span> every
+                single day
+              </span>
+            </span>
+          </p>
         </Marquee>
       </section>
 
