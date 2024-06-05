@@ -2,10 +2,10 @@ import "./test.css";
 import Image from "next/image";
 import Teams from "./_components/teams";
 import { BikiniCatSVG, EyeSVG, SolutionSVG } from "@/components/icons";
-import React from "react";
-import InstagramPosts from "./_components/instagram-posts";
+import React, { Suspense } from "react";
 import ContactForm from "@/components/contact-form";
 import Marquee from "@/components/ui/marquee";
+import dynamic from "next/dynamic";
 
 const projects = [
   {
@@ -21,6 +21,8 @@ const projects = [
     image: "/assets/images/projects/project-3.webp",
   },
 ];
+
+const InstagramPosts = dynamic(() => import("./_components/instagram-posts"));
 
 export default function Home() {
   return (
