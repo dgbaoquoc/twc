@@ -7,7 +7,7 @@ export default function InstagramPosts() {
   React.useEffect(() => {
     const interval = setInterval(() => {
       const link = document.querySelector<HTMLElement>(
-        'a[href*="elfsight.com/instagram-feed-instashow"]'
+        'a[href*="elfsight.com/instagram-feed-instashow"]',
       );
       if (link) {
         link.style.setProperty("display", "none", "important");

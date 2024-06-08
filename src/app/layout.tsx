@@ -56,7 +56,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          `${inter.className} ${gta.variable} ${fasterOne.variable}`
+          `${inter.className} ${gta.variable} ${fasterOne.variable}`,
         )}
         style={{
           backgroundImage: `url(${BackgroundImage.src})`,

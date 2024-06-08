@@ -22,11 +22,13 @@ const projects = [
   },
 ];
 
-const InstagramPosts = dynamic(() => import("./_components/instagram-posts"));
+const InstagramPosts = dynamic(() => import("./_components/instagram-posts"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-w-[375px]">
       <section className="flex justify-center">
         <Image
           priority
@@ -192,7 +194,7 @@ export default function Home() {
         </Marquee>
       </section>
 
-      <section id="ig-posts" className="mb-10">
+      <section id="ig-posts" className="mb-10 w-full overflow-x-hidden">
         <InstagramPosts />
       </section>
 

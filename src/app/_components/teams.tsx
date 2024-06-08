@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
 const Founder = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: true,
+  ssr: false,
 });
 
 export default function Teams() {
